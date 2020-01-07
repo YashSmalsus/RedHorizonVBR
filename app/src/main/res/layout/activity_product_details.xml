@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data class="ActivityProductDetailsBinding" />
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/grey_transparent_20"
+        android:fitsSystemWindows="true"
+        android:id="@+id/productDetailsViewGroup"
+        tools:context=".view.activities.ProductDetailsActivity">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:fitsSystemWindows="true"
+            android:theme="@style/AppTheme.NoActionBar.AppBarOverlay">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:id="@+id/toolbar_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fitsSystemWindows="true"
+                app:contentScrim="?attr/colorPrimary"
+                app:layout_scrollFlags="scroll|enterAlways"
+                app:toolbarId="@+id/toolbar">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    app:layout_collapseMode="pin"
+                    app:popupTheme="@style/AppTheme.NoActionBar.PopupOverlay">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/custome_toolbar_height"
+                        android:background="@color/colorPrimary">
+
+                        <ImageButton
+                            android:id="@+id/productDetialsBack"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:background="@android:color/transparent"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/left"
+                            android:layout_alignParentStart="true" />
+
+                        <TextView
+                            android:id="@+id/screenTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="SHOP"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/screen_title_text_size"
+                            android:textStyle="normal" />
+
+                        <ImageButton
+                            android:id="@+id/myCartButton"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:padding="@dimen/grid_specing"
+                            android:layout_toLeftOf="@+id/cartCount"
+                            android:layout_centerVertical="true"
+                            android:background="@android:color/transparent"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/shopping_cart"
+                            android:layout_toStartOf="@+id/cartCount" />
+                        <TextView
+                            android:id="@+id/cartCount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:scaleType="fitStart"
+                            android:background="@drawable/white_radius"
+                            android:gravity="center"
+                            android:minWidth="17sp"
+                            android:adjustViewBounds="true"
+                            android:minHeight="17sp"
+                            android:paddingBottom="1dp"
+                            android:paddingLeft="4dp"
+                            android:paddingRight="4dp"
+                            android:text="0"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+                            android:visibility="visible"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginEnd="@dimen/grid_specing"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="@dimen/grid_specing" />
+                    </RelativeLayout>
+                </androidx.appcompat.widget.Toolbar>
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <include
+            android:id="@+id/nestedLayout"
+            layout="@layout/content_product_details" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

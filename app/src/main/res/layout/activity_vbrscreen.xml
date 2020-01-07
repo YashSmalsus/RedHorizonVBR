@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@drawable/vbr_bg_image"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:id="@+id/topHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/grid_specing"
+            android:background="@color/colorPrimary"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/headertext"
+                android:layout_width="wrap_content"
+                android:layout_margin="@dimen/grid_specing"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/virtual_board_room_title"
+                android:textColor="@color/white"
+                android:fontFamily="sans-serif-medium"
+                android:textSize="@dimen/toolbar_title_text_size" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_below="@+id/topHeader">
+            <FrameLayout
+                android:id="@+id/screen_VBR_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/textview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/view"
+            android:background="@drawable/vitual_table"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="3">
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_marginTop="12dp"
+                        android:id="@+id/secondPersonView"
+                        android:visibility="invisible"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:orientation="vertical">
+
+                        <com.mikhaellopez.circularimageview.CircularImageView
+                            android:id="@+id/sec_person_image"
+                            android:layout_gravity="right"
+                            android:src="@drawable/vb"
+                            app:civ_border_width="1dp"
+                            android:layout_width="@dimen/vbr_user_profile_height_width"
+                            android:layout_height="@dimen/vbr_user_profile_height_width" />
+
+                        <TextView
+                            android:id="@+id/sec_person_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:layout_marginTop="@dimen/grid_item_divider"
+                            android:textSize="@dimen/vbr_participates_name_size"
+                            android:padding="@dimen/grid_item_divider"
+                            android:background="@drawable/shape_bg_incoming_bubble"
+                            android:textColor="@color/white"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/firstPersonView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".8"
+                        android:visibility="visible"
+                        android:layout_gravity="center|top"
+                        android:orientation="vertical">
+
+                        <com.mikhaellopez.circularimageview.CircularImageView
+                            android:id="@+id/admin_image"
+                            android:src="@drawable/vb"
+                            app:civ_border_width="1dp"
+                            android:layout_gravity="center|top"
+                            android:layout_width="@dimen/vbr_user_profile_height_width"
+                            android:layout_height="@dimen/vbr_user_profile_height_width" />
+
+                        <TextView
+                            android:id="@+id/admin_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/grid_item_divider"
+                            android:paddingLeft="@dimen/grid_specing"
+                            android:paddingRight="@dimen/grid_specing"
+                            android:textSize="@dimen/vbr_participates_name_size"
+                            android:background="@drawable/shape_bg_incoming_bubble"
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/thirdPersonView"
+                        android:layout_width="0dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_height="wrap_content"
+                        android:visibility="invisible"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <com.mikhaellopez.circularimageview.CircularImageView
+                            android:id="@+id/third_person_image"
+                            android:layout_gravity="left"
+                            android:src="@drawable/vb"
+                            app:civ_border_width="1dp"
+                            android:layout_width="@dimen/vbr_user_profile_height_width"
+                            android:layout_height="@dimen/vbr_user_profile_height_width" />
+
+                        <TextView
+                            android:id="@+id/third_person_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:layout_marginTop="@dimen/grid_item_divider"
+                            android:textSize="10sp"
+                            android:padding="@dimen/grid_item_divider"
+                            android:text="Ashwani"
+                            android:background="@drawable/shape_bg_incoming_bubble"
+                            android:textColor="@color/color_primary"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/fab_margin"
+                    android:layout_marginRight="@dimen/fab_margin"
+                    android:weightSum="4">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:visibility="invisible"
+                        android:id="@+id/fourthPersonView"
+                        android:orientation="vertical">
+
+                        <com.mikhaellopez.circularimageview.CircularImageView
+                            android:id="@+id/fourth_person_image"
+                            android:layout_gravity="center"
+                            android:src="@drawable/vb"
+                            app:civ_border_width="1dp"
+                            android:layout_width="@dimen/vbr_user_profile_height_width"
+                            android:layout_height="@dimen/vbr_user_profile_height_width" />
+
+                        <TextView
+                            android:id="@+id/fourth_person_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/grid_item_divider"
+                            android:textSize="10sp"
+                            android:text="Ashwani"
+                            android:background="@drawable/shape_bg_incoming_bubble"
+                            android:gravity="right"
+                            android:textColor="@color/color_primary"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:visibility="invisible"
+                        android:id="@+id/fifthPersonView"
+                        android:orientation="vertical">
+
+                        <com.mikhaellopez.circularimageview.CircularImageView
+                            android:id="@+id/fifth_person_image"
+                            android:layout_gravity="center"
+                            android:src="@drawable/vb"
+                            app:civ_border_width="1dp"
+                            android:layout_width="@dimen/vbr_user_profile_height_width"
+                            android:layout_height="@dimen/vbr_user_profile_height_width" />
+
+                        <TextView
+                            android:id="@+id/fifth_person_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/grid_item_divider"
+                            android:textSize="10sp"
+                            android:text="Ashwani"
+                            android:background="@drawable/shape_bg_incoming_bubble"
+                            android:gravity="right"
+                            android:textColor="@color/colorPrimary"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/grid_item_divider"
+                    android:layout_marginRight="@dimen/grid_item_divider"
+                    android:weightSum="4">
+
+                    <LinearLayout
+                        android:id="@+id/sixPersonView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <com.mikhaellopez.circularimageview.CircularImageView
+                            android:layout_gravity="center"
+                            android:id="@+id/sixPersonImageView"
+                            android:src="@drawable/vb"
+                            app:civ_border_width="1dp"
+                            android:layout_width="@dimen/vbr_user_profile_height_width"
+                            android:layout_height="@dimen/vbr_user_profile_height_width" />
+
+                        <TextView
+                            android:id="@+id/sixPersonName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/grid_item_divider"
+                            android:textSize="@dimen/vbr_participates_name_size"
+                            android:background="@drawable/shape_bg_incoming_bubble"
+                            android:gravity="right"
+                            android:textColor="@color/color_primary"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/sevenPersonView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:visibility="gone"
+                        android:orientation="vertical">
+
+                        <com.mikhaellopez.circularimageview.CircularImageView
+                            android:layout_gravity="center"
+                            android:src="@drawable/vb"
+                            android:layout_width="@dimen/vbr_user_profile_height_width"
+                            app:civ_border_width="1dp"
+                            android:id="@+id/sevenPersonImageView"
+                            android:layout_height="@dimen/vbr_user_profile_height_width" />
+
+                        <TextView
+                            android:id="@+id/sevenPersonName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/grid_item_divider"
+                            android:textSize="@dimen/vbr_participates_name_size"
+                            android:background="@drawable/shape_bg_incoming_bubble"
+                            android:gravity="right"
+                            android:textColor="@color/color_primary"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floating_action_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/fab_margin"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        app:srcCompat="@drawable/add_btn"/>
+</RelativeLayout>

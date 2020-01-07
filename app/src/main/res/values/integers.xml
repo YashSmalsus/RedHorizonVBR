@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="posts_images_preview_columns">3</integer>
+    <integer name="photo_list_preview_columns">2</integer>
+    <integer name="calling_notificationId">100</integer>
+    <integer name="new_message_notificationId">200</integer>
+    <integer name="calling_progress_notification">300</integer>
+
+</resources>

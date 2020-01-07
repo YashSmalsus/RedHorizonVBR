@@ -1,0 +1,125 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data class="ActivityNotificationScreenBinding" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/custome_toolbar_height"
+            android:background="@color/colorPrimary"
+            android:padding="10dp">
+
+            <ImageButton
+                android:id="@+id/notificationback"
+                android:layout_width="@dimen/custome_toolbar_height"
+                android:layout_height="@dimen/custome_toolbar_height"
+                android:layout_centerVertical="true"
+                android:background="@android:color/transparent"
+                android:src="@drawable/left" />
+
+            <TextView
+                android:id="@+id/notificationTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="Notification"
+                android:textColor="@color/white"
+                android:textSize="@dimen/screen_title_text_size" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+
+            <com.smalsus.redhorizonvbr.view.CircleImageView
+                android:id="@+id/confirmUserProfile"
+                android:layout_width="@dimen/user_profile_view_size"
+                android:layout_height="@dimen/user_profile_view_size"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/defaultuser" />
+
+            <TextView
+                android:id="@+id/confirmMessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/grid_specing"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="normal" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/fab_margin">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:gravity="bottom"
+                    android:padding="@dimen/fab_margin"
+                    android:text="Schedule"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/tab_text_size"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/pioedittxt5"
+                    style="@style/Widget.AppCompat.Spinner.Underlined"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="right"
+                    android:spinnerMode="dropdown" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/bottomActionsButtons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/fab_margin"
+                android:layout_marginTop="@dimen/fab_margin"
+                android:layout_marginRight="@dimen/fab_margin"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/acceptInvitation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/fab_margin"
+                    android:layout_marginRight="@dimen/fab_margin"
+                    android:background="@drawable/black_rounder_bg"
+                    android:gravity="center"
+                    android:padding="@dimen/fab_margin"
+                    android:text="ACCEPT"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/declineInvitaion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/fab_margin"
+                    android:layout_marginTop="@dimen/grid_specing"
+                    android:layout_marginRight="@dimen/fab_margin"
+                    android:background="@drawable/gray_rounded_bg"
+                    android:gravity="center"
+                    android:padding="@dimen/fab_margin"
+                    android:text="DECLINE"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+</layout>

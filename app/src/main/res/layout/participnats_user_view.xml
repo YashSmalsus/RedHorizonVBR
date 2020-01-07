@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:paddingLeft="@dimen/grid_specing"
+    android:paddingRight="@dimen/grid_specing"
+    android:layout_height="wrap_content">
+
+    <com.smalsus.redhorizonvbr.view.CircleImageView
+        android:id="@+id/profilePictureView"
+        android:layout_width="40dp"
+        android:src="@drawable/defaultuser"
+        android:layout_height="40dp" />
+
+    <TextView
+        android:id="@+id/userNameView"
+        android:layout_width="match_parent"
+        android:textSize="@dimen/font_small"
+        android:textColor="@color/white"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

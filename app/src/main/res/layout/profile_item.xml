@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="12dp">
+
+    <LinearLayout
+        android:id="@+id/eventColor"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_marginBottom="8dp"/>
+
+    <LinearLayout
+        android:id="@+id/mainlayout_profile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="false"
+        android:orientation="vertical">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/fab_margin"
+            android:orientation="vertical">
+
+
+
+            <RelativeLayout
+                android:id="@+id/topEventItemLayout"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="@dimen/grid_specing">
+
+                <TextView
+                    android:id="@+id/eventName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_toLeftOf="@+id/eventBy"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="@string/team_meeting_tiitle"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/caller_name_text_size"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/eventBy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginRight="51dp"
+                    android:layout_marginBottom="-3dp"
+                    android:gravity="bottom"
+                    android:text="@string/team_meeting_tiitle"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/event_time_text_size"
+                    android:textStyle="italic" />
+
+                <com.smalsus.redhorizonvbr.view.CircleImageView
+                    android:id="@+id/eventUserImage"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignEnd="@id/eventBy"
+                    android:layout_alignRight="@id/eventBy"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:foregroundGravity="bottom"
+                    android:src="@drawable/defaultuser" />
+
+                <!--<com.mikhaellopez.circularimageview.CircularImageView
+                    android:id="@+id/deleteEvent"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/ic_delete_black_24dp"/>-->
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.95"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/grid_specing"
+                            android:text="@string/agenda_hint"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/agenda_text_size" />
+
+                        <TextView
+                            android:id="@+id/agendatext"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:maxLines="1"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/agenda_text_size" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/grid_specing"
+                            android:text="@string/topic_hint"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/agenda_text_size" />
+
+                        <TextView
+                            android:id="@+id/topicTV"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/grid_specing"
+                            android:maxLines="2"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/agenda_text_size" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/grid_specing"
+                            android:text="@string/subtopic_hint"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/agenda_text_size" />
+
+                        <TextView
+                            android:id="@+id/subtopic_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/grid_specing"
+                            android:maxLines="2"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/event_time_text_size" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <!--<TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/grid_specing"
+                            android:text="@string/meeting_time"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/agenda_text_size" />-->
+
+                        <TextView
+                            android:id="@+id/meeting_time"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/grid_specing"
+                            android:maxLines="2"
+                            android:drawableLeft="@drawable/ic_access_time_black_24dp"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/agenda_text_size" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="2">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:text="@string/parcticpants_hint"
+                                android:textColor="@color/black"
+                                android:textSize="13sp" />
+
+                            <TextView
+                                android:id="@+id/no_of_participants"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:background="@drawable/circulartext"
+                                android:gravity="center"
+                                android:maxLines="1"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/event_time_text_size" />
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="@dimen/grid_item_divider">
+
+                                <com.mikhaellopez.circularimageview.CircularImageView
+                                    android:id="@+id/firstUser"
+                                    android:layout_width="@dimen/participants_view_hight_width"
+                                    android:layout_height="@dimen/participants_view_hight_width"/>
+
+                                <com.mikhaellopez.circularimageview.CircularImageView
+                                    android:id="@+id/secondUser"
+                                    android:layout_width="@dimen/participants_view_hight_width"
+                                    android:layout_height="@dimen/participants_view_hight_width"
+                                    android:layout_marginLeft="15dp"/>
+
+                                <!--<com.mikhaellopez.circularimageview.CircularImageView
+                                    android:layout_width="@dimen/participants_view_hight_width"
+                                    android:layout_height="@dimen/participants_view_hight_width"
+                                    android:layout_marginLeft="30dp"
+                                    android:src="@drawable/defaultuser"
+                                    android:visibility="gone" />-->
+                            </RelativeLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:text="Location : "
+                                android:textColor="@color/black"
+                                android:textSize="13sp" />
+
+                            <TextView
+                                android:id="@+id/location_image"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:text="Location"
+                                android:textColor="@color/black"
+                                android:textSize="13sp"/>
+
+                            <!--<ImageView
+                                android:id="@+id/location_image"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center" />-->
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/hashTagLinearLayoutContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:id="@+id/hashTagText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:textColor="@color/color_primary"
+                            android:textSize="@dimen/event_time_text_size" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="@dimen/fab_margin"
+                    android:layout_weight=".1"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/call_btn"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:background="@drawable/audiocall"
+                        android:focusable="false"
+                        android:visibility="gone" />
+
+                    <ImageButton
+                        android:id="@+id/vbr_btn"
+                        android:layout_width="30dp"
+                        android:layout_height="26dp"
+                        android:layout_gravity="right"
+                        android:layout_marginLeft="30dp"
+                        android:background="@drawable/vbr"
+                        android:focusable="false" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/childDevider"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/fab_margin"
+            android:background="@android:color/transparent"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,55 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data class="SocialNewsFeedBinding" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_color"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/item_profile_img"
+            android:background="@color/bg_color"
+            android:padding="@dimen/grid_specing">
+
+            <com.smalsus.redhorizonvbr.view.CircleImageView
+                android:id="@+id/user_profile_image"
+                android:layout_width="@dimen/item_feed_profile_size"
+                android:layout_height="@dimen/item_feed_profile_size"
+                android:layout_alignParentLeft="true"
+                android:src="@drawable/defaultuser" />
+
+            <RelativeLayout
+                android:id="@+id/add_postlayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/user_profile_image">
+
+                <com.an.customfontview.CustomTextView
+                    android:id="@+id/post_textview"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/userprofileheghtandwidth"
+                    android:background="@drawable/search_box_bg"
+                    android:text="@string/write_something_here"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/font_small" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipe_refresh_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/list_feed"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    </LinearLayout>
+
+</layout>

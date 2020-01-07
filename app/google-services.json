@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "603752674980",
+    "firebase_url": "https://redhorizondev-b8c12.firebaseio.com",
+    "project_id": "redhorizondev-b8c12",
+    "storage_bucket": "redhorizondev-b8c12.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:603752674980:android:0577d68035360a853d9831",
+        "android_client_info": {
+          "package_name": "com.smalsus.redhorizonvbr"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "603752674980-116eaj0nve10fh2816egb8o07glrmsfi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBRNmDEvvvIbOOKUhbDeqolTybB-b4SViU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "603752674980-1ftvg5nodql98cin6gs73pppeeebmtv1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

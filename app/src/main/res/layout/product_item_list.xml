@@ -1,0 +1,56 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data class="ProductItemListBinding" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/fab_margin"
+        android:paddingRight="@dimen/fab_margin">
+
+        <RelativeLayout
+            android:id="@+id/searchContainerView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/fab_margin"
+            android:layout_marginRight="@dimen/fab_margin"
+            android:layout_toRightOf="@+id/item_profile_img"
+            android:layout_marginTop="@dimen/grid_specing"
+            android:background="@color/grey_transparent_20">
+
+            <EditText
+                android:id="@+id/searchText_edit_view"
+                android:layout_width="match_parent"
+                android:imeOptions="actionSearch"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:background="@null"
+                android:drawableLeft="@drawable/search_ic"
+                android:drawablePadding="@dimen/fab_margin"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/fab_margin"
+                android:paddingRight="@dimen/fab_margin"
+                android:hint="Search Here"
+                android:singleLine="true"
+                android:textColor="@color/grey"
+                android:textSize="@dimen/font_medium" />
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/product_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/searchContainerView"
+            android:paddingTop="@dimen/grid_specing"
+            android:paddingLeft="@dimen/fab_margin"
+            android:paddingRight="@dimen/fab_margin"/>
+        <ProgressBar
+            android:id="@+id/progressUpdate"
+            android:layout_width="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+</layout>

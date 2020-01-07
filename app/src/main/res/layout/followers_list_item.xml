@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/transitionContainer"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/ListItem"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/mainlayout"
+        style="@style/ListItem"
+        android:clickable="true">
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:id="@+id/followersUserProfilePicture"
+            android:layout_width="@dimen/userprofileheghtandwidth"
+            android:layout_height="@dimen/userprofileheghtandwidth"
+            android:layout_centerVertical="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ai_image"
+            app:civ_shadow="false" />
+
+        <TextView
+            android:id="@+id/followersUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@+id/userprofilepic"
+            android:fontFamily="sans-serif"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:layout_marginBottom="8dp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_medium"
+            android:layout_marginStart="15dp" />
+
+        <TextView
+            android:id="@+id/followersUserID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/username"
+            android:layout_marginLeft="16dp"
+            android:layout_marginBottom="8dp"
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/grid_item_divider"
+            android:layout_toRightOf="@+id/userprofilepic"
+            android:fontFamily="sans-serif"
+            android:textColor="@color/grey"
+            android:textSize="@dimen/location_text_size" />
+
+        <TextView
+            android:id="@+id/followersUserLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/userID"
+            android:maxLines="1"
+            android:layout_centerVertical="true"
+            android:ellipsize="end"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_toRightOf="@+id/userprofilepic"
+            android:fontFamily="sans-serif"
+            android:textColor="@color/grey"
+            android:textSize="@dimen/location_text_size" />
+
+    </RelativeLayout>
+
+</LinearLayout>

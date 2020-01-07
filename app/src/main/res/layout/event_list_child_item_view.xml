@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainlayout_profile"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:focusable="false"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/fab_margin"
+        android:background="@drawable/event_list_child_item_bg"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".9"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/grid_specing"
+                        android:text="@string/topic_hint"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/agenda_text_size"/>
+
+                    <TextView
+                        android:id="@+id/topic_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/grid_specing"
+                        android:maxLines="2"
+                        android:text="User Interface"
+                        android:textColor="@color/red"
+                        android:textSize="@dimen/agenda_text_size"/>
+
+                </LinearLayout>
+
+                <!--<LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/grid_specing"
+                        android:text="@string/topic_hint"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/agenda_text_size" />
+
+                    <TextView
+                        android:id="@+id/hashTag_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/grid_specing"
+                        android:maxLines="2"
+                        android:text="User Interface"
+                        android:textColor="@color/red"
+                        android:textSize="@dimen/agenda_text_size"/>
+
+                </LinearLayout>-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/grid_specing"
+                        android:text="@string/subtopic_hint"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/agenda_text_size" />
+
+                    <TextView
+                        android:id="@+id/subtopic_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/grid_specing"
+                        android:maxLines="2"
+                        android:text="Mobile Application"
+                        android:textColor="@color/red"
+                        android:textSize="@dimen/event_time_text_size" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/grid_specing"
+                        android:text="@string/agenda_hint"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/agenda_text_size" />
+
+                    <TextView
+                        android:id="@+id/agendatext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:textColor="@color/grey"
+                        android:textSize="@dimen/agenda_text_size" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/grid_specing"
+                        android:text="Genre:"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/agenda_text_size" />
+
+                    <TextView
+                        android:id="@+id/genreText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="Business"
+                        android:textColor="@color/grey"
+                        android:textSize="@dimen/agenda_text_size" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/grid_specing"
+                        android:text="Attire:"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/agenda_text_size" />
+
+                    <TextView
+                        android:id="@+id/attireText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="Business"
+                        android:textColor="@color/grey"
+                        android:textSize="@dimen/agenda_text_size" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/grid_specing"
+                        android:text="Meeting Format"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/agenda_text_size" />
+
+                    <TextView
+                        android:id="@+id/meetingFormat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:ellipsize="end"
+                        android:text="Open Discussion"
+                        android:maxLines="1"
+                        android:textColor="@color/grey"
+                        android:textSize="@dimen/agenda_text_size" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/grid_specing"
+                        android:text="@string/meeting_time"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/agenda_text_size" />
+
+                    <TextView
+                        android:id="@+id/meeting_time"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/grid_specing"
+                        android:maxLines="2"
+                        android:textColor="@color/grey"
+                        android:textSize="@dimen/agenda_text_size" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.2"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:text="@string/parcticpants_hint"
+                            android:textColor="@color/black"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:id="@+id/no_of_participants"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/circulartext"
+                            android:gravity="center"
+                            android:maxLines="1"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/event_time_text_size" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="@dimen/grid_item_divider">
+
+                            <com.mikhaellopez.circularimageview.CircularImageView
+                                android:layout_width="@dimen/participants_view_hight_width"
+                                android:layout_height="@dimen/participants_view_hight_width"
+                                android:src="@drawable/defaultuser" />
+
+                            <com.mikhaellopez.circularimageview.CircularImageView
+                                android:layout_width="@dimen/participants_view_hight_width"
+                                android:layout_height="@dimen/participants_view_hight_width"
+                                android:layout_marginLeft="15dp"
+                                android:src="@drawable/defaultuser" />
+
+                            <com.mikhaellopez.circularimageview.CircularImageView
+                                android:layout_width="@dimen/participants_view_hight_width"
+                                android:layout_height="@dimen/participants_view_hight_width"
+                                android:layout_marginLeft="30dp"
+                                android:src="@drawable/defaultuser"
+                                android:visibility="gone" />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".6"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/grid_specing"
+                            android:text="Location : "
+                            android:textColor="@color/black"
+                            android:textSize="13sp" />
+
+                        <ImageView
+                            android:id="@+id/location_image"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="@dimen/fab_margin"
+                android:layout_weight=".1"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/call_btn"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/audiocall"
+                    android:focusable="false"
+                    android:visibility="gone" />
+
+                <ImageButton
+                    android:id="@+id/vbr_btn"
+                    android:layout_width="30dp"
+                    android:layout_height="26dp"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="30dp"
+                    android:background="@drawable/vbr"
+                    android:focusable="false" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/childDevider"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fab_margin"
+        android:background="@android:color/transparent"
+        android:visibility="gone" />
+</LinearLayout>

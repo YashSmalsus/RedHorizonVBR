@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/selectOrDeslectContact"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:id="@+id/attendeesCircularImageView"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/defaultuser"/>
+
+        <ImageView
+            android:id="@+id/removeAttendee"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/ic_check_white_24dp"
+            android:clickable="true"
+            android:background="@drawable/attendee_circular_image_background"
+            android:layout_toEndOf="@id/attendeesCircularImageView"
+            android:layout_alignBottom="@id/attendeesCircularImageView"
+            android:visibility="gone"
+            android:layout_marginLeft="-20dp"/>
+
+        <TextView
+            android:id="@+id/attendeesName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reginald Awesome"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/attendeesCircularImageView"
+            android:layout_marginLeft="15dp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/montserrat_medium"
+            android:textSize="15sp"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

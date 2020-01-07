@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="black">#000000</color>
+    <color name="white">#ffffff</color>
+    <color name="color_primary">#E33F3E</color>
+    <color name="color_primary_dark">#d0d0d0</color>
+    <color name="color_accent">@color/color_green_qb</color>
+    <color name="background_app_color">#ffffff</color>
+    <color name="color_green_qb">#4ad24d</color>
+    <color name="text_color_dark_grey">#6e6e6e</color>
+    <color name="colorPrimary">#C90F0E</color>
+    <color name="grey">#606060</color>
+    <color name="red">#FF0000</color>
+    <color name="green">#1DB325</color>
+    <color name="green_transparent">#1AD626</color>
+    <color name="colorPrimaryDark">#E33F3E</color>
+    <color name="black_transparent_50">#50000000</color>
+    <color name="grey_transparent_50">#50606060</color>
+    <color name="grey_transparent_20">#20606060</color>
+    <color name="grey_transparent_10">#10606060</color>
+
+    <color name="qr_color_laser">#807D7D</color>
+
+
+
+    <color name="textclr">#b8b8b8</color>
+    <color name="selected_radio_btn_color">#096EB0</color>
+    <color name="tab_selected_text_color">#FFC107</color>
+    <color name="week_header_bg_color">#FFA200</color>
+    <color name="calender_griditem_bg_color">#E33F3E</color>
+    <color name="home_tab_selected_bg_color">#055EF8</color>
+
+
+
+    <!--// Social news Feed Colors//-->
+
+    <color name="yellow">#F6A623</color>
+    <color name="violet">#673AB7</color>
+    <color name="violet_trans_80">#BF673AB7</color>
+
+
+    <color name="orange">#F07B3F</color>
+
+    <color name="red_logout">#E95354</color>
+
+    <color name="edit_post">#949494</color>
+    <color name="bg_edit_post">#969696</color>
+    <color name="bg_tab">#f2f3f8</color>
+
+    <color name="white_transparent_80">#BFFFFFFF</color>
+
+    <color name="primary_text">#212121</color>
+    <color name="secondary_text">#727272</color>
+    <color name="chrome_grey">#F2F2F2</color>
+    <color name="txt_profile">#2C4058</color>
+    <color name="title_txt">#1c1e21</color>
+    <color name="color_line">#40000000</color>
+    <color name="color_like_normal">#606770</color>
+    <color name="color_like_selected">#4080ff</color>
+    <color name="bg_color">#dcdee3</color>
+
+</resources>

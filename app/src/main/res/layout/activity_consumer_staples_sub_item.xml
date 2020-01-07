@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data class="ActivityConsumerStaplesSubItemBinding" />
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:id="@+id/topHeader"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/custome_toolbar_height"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorPrimary"
+        android:padding="@dimen/padding">
+        <ImageButton
+            android:id="@+id/addEvent_backbtn"
+            android:layout_width="@dimen/custome_toolbar_height"
+            android:layout_height="@dimen/custome_toolbar_height"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:src="@drawable/left" />
+        <TextView
+            android:id="@+id/categoryName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/screen_title_text_size" />
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/consumerStaplesSubItemListView"
+        android:layout_below="@+id/topHeader"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="visible" />
+    <ProgressBar
+        android:id="@+id/loaderProgressbar"
+        android:layout_width="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="visible"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>
+</layout>

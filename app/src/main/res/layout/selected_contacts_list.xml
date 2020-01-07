@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/selected_contacts_first_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:id="@+id/selected_contact_profile_picture"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/defaultuser"/>
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:id="@+id/remove_contact_button"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignBottom="@id/selected_contact_profile_picture"
+            android:layout_marginStart="-22dp"
+            android:layout_marginLeft="-22dp"
+            android:layout_marginBottom="-6dp"
+            android:layout_toEndOf="@id/selected_contact_profile_picture"
+            android:layout_toRightOf="@id/selected_contact_profile_picture"
+            android:clickable="true"
+            android:src="@drawable/remove_contact" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/selected_contacts_second_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/selected_contacts_first_container"
+        android:layout_marginTop="8dp">
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="Reginal Awesome"
+            android:gravity="start"
+            android:textColor="@color/black"
+            android:fontFamily="@font/montserrat_medium"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

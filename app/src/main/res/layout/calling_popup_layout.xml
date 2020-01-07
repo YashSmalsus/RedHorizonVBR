@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:id="@+id/topHeader"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_height="40dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="Select Contact"
+            android:textColor="@color/color_primary"
+            android:textSize="@dimen/tab_title_text_size"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+    <ListView
+        android:id="@+id/userlist"
+        android:layout_below="@+id/topHeader"
+        android:layout_above="@+id/callButtonView"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"/>
+    <LinearLayout
+        android:id="@+id/callButtonView"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/fab_margin"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:layout_height="60dp">
+        <Button
+            android:id="@+id/popupCancelButton"
+            android:layout_width="wrap_content"
+            android:text="Cancel"
+            android:padding="@dimen/grid_specing"
+            android:textColor="@color/black"
+            android:layout_marginRight="@dimen/fab_margin"
+            android:background="@drawable/call_button_inactive"
+            android:textSize="@dimen/tab_title_text_size"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:layout_height="35dp" />
+        <Button
+            android:id="@+id/popupCallButton"
+            android:layout_width="wrap_content"
+            android:text="Call"
+            android:padding="@dimen/grid_specing"
+            android:layout_marginLeft="@dimen/fab_margin"
+            android:textColor="@color/black"
+            android:background="@drawable/call_button_inactive"
+            android:textSize="@dimen/tab_title_text_size"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:layout_height="35dp" />
+    </LinearLayout>
+</LinearLayout>

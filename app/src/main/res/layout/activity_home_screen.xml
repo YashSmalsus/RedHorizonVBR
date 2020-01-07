@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data class="HomeScreenBinding" />
+
+    <RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".view.activities.HomeScreen">
+
+        <LinearLayout
+            android:id="@+id/tapToReturnCall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/green"
+            android:padding="@dimen/grid_specing">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="@string/tap_to_return_to_call"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_medium" />
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/frame_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/bottomTabContainer"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/navigation"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="0dp"
+            android:background="@drawable/border_layout"
+            android:visibility="gone"
+            app:labelVisibilityMode="labeled"
+            app:menu="@menu/navigation" />
+        <LinearLayout
+            android:id="@+id/bottomTabContainer"
+            android:layout_width="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!--<LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:orientation="horizontal"
+                android:background="#A39898"/>-->
+            <include
+                android:id="@+id/bottomLayoutTab"
+                layout="@layout/tablayout" />
+        </LinearLayout>
+
+    </RelativeLayout>
+</layout>

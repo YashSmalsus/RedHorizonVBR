@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.fragments.Vbr_Fragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/top"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/topHeader"
+            android:orientation="horizontal"
+            android:weightSum="5">
+
+            <LinearLayout
+                android:id="@+id/vbrscreen"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/border_layout"
+                android:layout_marginTop="5dp"
+                android:layout_weight="4.5">
+
+                <WebView
+                    android:id="@+id/webView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="2dp"
+                    android:background="@color/black" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/vbrscreen"
+                android:layout_weight=".5">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="@dimen/fab_margin"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/add_btn"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorPrimary"
+                        android:src="@drawable/add_btn"
+                        android:textColor="@color/white"
+                        android:visibility="gone" />
+
+                    <ImageButton
+                        android:id="@+id/ppt_btn"
+                        android:layout_width="@dimen/vbr_button_height_width"
+                        android:layout_height="@dimen/vbr_button_height_width"
+                        android:padding="6dp"
+                        android:background="@drawable/unactive_ppt"
+                        android:textColor="@color/white" />
+
+                    <ImageButton
+                        android:id="@+id/pdf_btn"
+                        android:layout_width="@dimen/vbr_button_height_width"
+                        android:layout_height="@dimen/vbr_button_height_width"
+                        android:layout_marginTop="6dp"
+                        android:background="@drawable/unactive_pdf" />
+
+                    <ImageButton
+                        android:id="@+id/image_btn"
+                        android:layout_width="@dimen/vbr_button_height_width"
+                        android:layout_height="@dimen/vbr_button_height_width"
+                        android:layout_marginTop="6dp"
+                        android:background="@drawable/unactive_img" />
+
+                    <ImageButton
+                        android:id="@+id/doc_btn"
+                        android:layout_width="@dimen/vbr_button_height_width"
+                        android:layout_height="@dimen/vbr_button_height_width"
+                        android:layout_marginTop="6dp"
+                        android:background="@drawable/unactive_doc" />
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</FrameLayout>

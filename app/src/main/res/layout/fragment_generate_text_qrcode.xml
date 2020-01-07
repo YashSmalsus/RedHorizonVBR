@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data class="FragmentGenerateTextQRCode" />
+
+    <ScrollView xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".view.fragments.GenerateTextItemQrCode">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/fab_margin">
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="220dp"
+                android:layout_margin="@dimen/fab_margin"
+                android:layout_marginTop="@dimen/grid_specing"
+                android:background="@color/grey_transparent_20">
+
+                <EditText
+                    android:id="@+id/textInfoView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:drawablePadding="@dimen/fab_margin"
+                    android:gravity="top"
+                    android:hint="Enter your text"
+                    android:paddingLeft="@dimen/fab_margin"
+                    android:paddingRight="@dimen/fab_margin"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/font_medium" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/fab_margin"
+                android:background="@color/grey_transparent_20"
+                android:orientation="horizontal"
+                android:padding="@dimen/grid_specing">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:gravity="bottom"
+                    android:text="Select Type"
+                    android:textSize="@dimen/tab_text_size"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/textItemQrCodeType"
+                    style="@style/Widget.AppCompat.Spinner.DropDown"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="right"
+                    android:spinnerMode="dropdown" />
+
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/generateCode"
+                android:layout_width="200dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/fab_margin"
+                android:background="@color/black"
+                android:gravity="center"
+                android:text="GENERATE"
+                android:textColor="@color/white"
+                android:textSize="22sp" />
+
+            <ProgressBar
+                android:id="@+id/qrCodeLoader"
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:visibility="gone" />
+        </LinearLayout>
+
+    </ScrollView>
+</layout>

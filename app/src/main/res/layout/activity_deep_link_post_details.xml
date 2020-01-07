@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DeepLinkPostDetailsActivity.DeepLinkPostDetailsActivity"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/PostDetailsToolbarContainer"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/color_primary"
+        android:padding="10dp">
+
+        <ImageButton
+            android:id="@+id/backImageButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/left"
+            android:background="@android:color/transparent"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:id="@+id/headingTextFirstSubPart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RedHorizon"
+            android:textSize="20sp"
+            android:layout_centerInParent="true"
+            android:textColor="@color/white"/>
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/PostDetailsPost"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/PostDetailsToolbarContainer"
+        android:layout_marginBottom="@dimen/fab_margin"
+        android:background="@android:color/white"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/padding">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:paddingTop="@dimen/padding">
+
+            <com.smalsus.redhorizonvbr.view.CircleImageView
+                android:id="@+id/item_profile_img"
+                android:layout_width="@dimen/item_feed_profile_size"
+                android:layout_height="@dimen/item_feed_profile_size"
+                android:layout_alignParentLeft="true"
+                android:src="@drawable/defaultuser"
+                android:layout_marginRight="8dp"/>
+
+            <TextView
+                android:id="@+id/userNameTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Yash Agarwal"
+                android:textStyle="bold"
+                android:textSize="12sp"
+                android:fontFamily="@font/montserrat_medium"
+                android:layout_marginTop="12dp"
+                android:layout_toRightOf="@id/item_profile_img"/>
+
+            <TextView
+                android:id="@+id/hoursAgoTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="8 hours ago"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="8dp"
+                android:textSize="12sp"
+                android:layout_marginTop="12dp"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_below="@id/item_profile_img"
+                android:src="@drawable/nature_image_first"
+                android:padding="8dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true">
+
+                <ImageButton
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/share_hollow"
+                    android:background="@android:color/transparent"/>
+
+                <Space
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"/>
+
+                <ImageButton
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/comment_hollow"
+                    android:background="@android:color/transparent"/>
+
+                <Space
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"/>
+
+                <ImageButton
+                    android:id="@+id/heartsLikes"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/hearts_hollow"
+                    android:background="@android:color/transparent"/>
+
+                <Space
+                    android:layout_width="2dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:textColor="@color/black"
+                    android:text="0"/>
+
+                <Space
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"/>
+
+                <ImageButton
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/post_details_reply"
+                    android:background="@android:color/transparent"
+                    />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

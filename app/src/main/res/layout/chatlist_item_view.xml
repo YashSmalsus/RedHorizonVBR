@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/text_message_incoming"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/incoming_speech_bubble"
+        android:lineSpacingExtra="2dp"
+        android:paddingLeft="20dp"
+        android:paddingTop="4dp"
+        android:layout_margin="@dimen/grid_specing"
+        android:paddingRight="@dimen/fab_margin"
+        android:paddingBottom="@dimen/fab_margin"
+        android:text="Hi, How are you?"
+        android:textColor="@color/black"
+        android:textSize="13.5dp"
+        android:visibility="gone"
+        android:fontFamily="sans-serif-light"
+        android:layout_marginRight="@dimen/fab_margin" />
+
+    <TextView
+        android:id="@+id/textMessageOutGoing"
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:layout_margin="@dimen/grid_specing"
+        android:layout_height="wrap_content"
+        android:background="@drawable/outgoing_speech_bubble"
+        android:lineSpacingExtra="2dp"
+        android:paddingLeft="20dp"
+        android:paddingTop="4dp"
+        android:paddingRight="@dimen/fab_margin"
+        android:paddingBottom="@dimen/fab_margin"
+        android:text="Hi, How are you?"
+        android:fontFamily="sans-serif-light"
+        android:textColor="@color/white"
+        android:visibility="gone"
+        android:textSize="13.5dp"
+        android:layout_marginLeft="@dimen/fab_margin" />
+
+</RelativeLayout>

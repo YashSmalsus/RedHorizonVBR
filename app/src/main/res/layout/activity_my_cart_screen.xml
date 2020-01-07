@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data class="MyCartScreenBinding" />
+
+    <RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/grey_transparent_20"
+        tools:context=".view.activities.ProductDetailsActivity"
+        tools:showIn="@layout/activity_product_details">
+        <RelativeLayout
+            android:id="@+id/myCartTopHeader"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/custome_toolbar_height"
+            android:background="@color/colorPrimary">
+
+            <ImageButton
+                android:id="@+id/myCartBackButton"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:background="@android:color/transparent"
+                android:scaleType="fitCenter"
+                android:src="@drawable/left" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:fontFamily="sans-serif-medium"
+                android:text="My Cart"
+                android:textColor="@color/white"
+                android:textSize="@dimen/screen_title_text_size"
+                android:textStyle="normal" />
+
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/myCartTopHeader"
+            android:paddingBottom="@dimen/padding"
+            android:layout_above="@+id/bottomActionsButton">
+
+            <LinearLayout xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/grey_transparent_20"
+                android:orientation="vertical"
+                tools:context=".view.activities.MyCartScreen">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/padding"
+                    android:weightSum="4">
+
+                    <LinearLayout
+                        android:id="@+id/userDetailsContainer"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:baselineAligned="false"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/userNameTV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/font_small" />
+
+                        <TextView
+                            android:id="@+id/useraddressTV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/grey"
+                            android:textSize="@dimen/font_small" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="@dimen/grid_specing"
+                        android:layout_marginLeft="@dimen/grid_specing"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical">
+
+                        <Button
+                            android:id="@+id/changeOrAddAddress"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/border"
+                            android:fontFamily="sans-serif-condensed-medium"
+                            android:text="Change"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/font_small" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/productItemViewContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/fab_margin"
+                    android:background="@android:color/transparent"
+                    android:orientation="vertical">
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/priceDeatailsContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:baselineAligned="false"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@color/white">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/fab_margin"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="PRICE DETAILS"
+                            android:textColor="@color/grey"
+                            android:textSize="@dimen/font_small"
+                            android:layout_marginStart="@dimen/fab_margin" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_alignParentBottom="true"
+                            android:background="@color/grey_transparent_20" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@color/white"
+                        android:paddingLeft="@dimen/fab_margin"
+                        android:paddingRight="@dimen/fab_margin">
+
+                        <TextView
+                            android:id="@+id/priceTitleTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="Price"
+                            android:textColor="@color/grey"
+                            android:textSize="@dimen/font_small" />
+
+                        <TextView
+                            android:id="@+id/priceValueTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/fab_margin"
+                            android:textColor="@color/grey"
+                            android:textSize="@dimen/font_small"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginStart="@dimen/fab_margin" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@color/white"
+                        android:paddingLeft="@dimen/fab_margin"
+                        android:paddingRight="@dimen/fab_margin">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:fontFamily="sans-serif-condensed"
+                            android:text="Delivery"
+                            android:textColor="@color/grey"
+                            android:textSize="@dimen/font_small" />
+
+                        <TextView
+                            android:id="@+id/deliveryCharge"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/fab_margin"
+                            android:text="Free"
+                            android:textColor="@color/green"
+                            android:textSize="@dimen/font_small"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginStart="@dimen/fab_margin" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@color/white"
+                        android:paddingLeft="@dimen/fab_margin"
+                        android:paddingRight="@dimen/fab_margin">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="Amount Payable"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/font_small" />
+
+                        <TextView
+                            android:id="@+id/payableAmountPrice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/fab_margin"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/font_small"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginStart="@dimen/fab_margin" />
+
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/bottomActionsButton"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/top_bottom_border"
+            android:orientation="horizontal"
+            android:padding="@dimen/grid_specing"
+            android:weightSum="2">
+
+            <TextView
+                android:id="@+id/allItemPriceTv"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font_medium" />
+
+            <TextView
+                android:id="@+id/continueButton"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/black"
+                android:gravity="center"
+                android:text="Place Order"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_medium" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/emptyItemView"
+            android:layout_width="match_parent"
+            android:layout_centerInParent="true"
+            android:orientation="vertical"
+            android:background="@color/white"
+            android:layout_below="@+id/myCartTopHeader"
+            android:visibility="visible"
+            android:gravity="center"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:scaleType="fitXY"
+                android:src="@drawable/empty_cart"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:textAllCaps="false"
+                android:textSize="@dimen/font_large"
+                android:text="Cart Empty"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </RelativeLayout>
+</layout>

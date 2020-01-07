@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data class="ActivitySingleAudioDemoBinding" />
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+
+        android:id="@+id/coordinator_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary"
+        android:fitsSystemWindows="true"
+        tools:context=".view.activities.SingleAudioDemoActivity">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="@dimen/fab_margin">
+
+
+            <LinearLayout
+                android:id="@+id/caller_info_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/audio_call_ic"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/redhorizon_voice_call"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_medium" />
+
+                <TextView
+                    android:id="@+id/callerName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/caller_name_textsize" />
+
+                <TextView
+                    android:id="@+id/connecting_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/caller_name_textsize"
+                    android:visibility="visible" />
+
+                <Chronometer
+                    android:id="@+id/chronometer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|center"
+                    android:layout_marginTop="@dimen/grid_specing"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_small"
+                    android:visibility="invisible" />
+
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/addParticipants"
+                android:layout_width="@dimen/call_screen_fab_button_size"
+                android:layout_height="@dimen/call_screen_fab_button_size"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="bottom|end"
+                android:layout_marginEnd="@dimen/fab_margin"
+                android:layout_marginRight="@dimen/fab_margin"
+                android:background="@android:color/transparent"
+                android:padding="@dimen/grid_specing"
+                android:scaleType="fitCenter"
+                android:src="@drawable/add_partcipants"
+                android:visibility="visible" />
+
+
+            <RelativeLayout
+                android:id="@+id/shareScreenContainer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:visibility="gone">
+
+                <com.twilio.video.VideoView
+                    android:id="@+id/primary_video_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center" />
+                <LinearLayout
+                    android:id="@+id/participantsViewContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="@android:color/transparent"
+                    android:layout_alignParentTop="true"
+                    android:gravity="left"
+                    android:orientation="horizontal"
+                    android:visibility="visible"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/userProfilesView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/actionButtonView"
+                android:layout_below="@+id/caller_info_view"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="@dimen/grid_specing"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:id="@+id/singlUserView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:id="@+id/userProfilePicture"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/twoUserContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    android:weightSum="2">
+
+                    <ImageView
+                        android:id="@+id/secondUserContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginBottom="@dimen/grid_specing"
+                        android:layout_weight="1"
+                        android:scaleType="fitXY" />
+
+                    <ImageView
+                        android:id="@+id/thirdUserContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginTop="@dimen/grid_specing"
+                        android:layout_weight="1"
+                        android:scaleType="fitXY"
+                        android:visibility="visible" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/threeUserContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginBottom="@dimen/grid_specing"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal"
+                        android:visibility="visible"
+                        android:weightSum="2">
+
+                        <ImageView
+                            android:id="@+id/fourthUserImage"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:scaleType="fitXY" />
+
+                        <ImageView
+                            android:id="@+id/fiveUserImage"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:scaleType="fitXY"
+                            android:visibility="visible" />
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/sixUserImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginTop="@dimen/grid_specing"
+                        android:layout_weight="1"
+                        android:scaleType="fitXY" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/fourUserContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginBottom="@dimen/grid_specing"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal"
+                        android:visibility="visible"
+                        android:weightSum="2">
+
+                        <ImageView
+                            android:id="@+id/sevenUserImage"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:scaleType="fitXY" />
+
+                        <ImageView
+                            android:id="@+id/eightUserImage"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:scaleType="fitXY"
+                            android:visibility="visible" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginTop="@dimen/grid_specing"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal"
+                        android:visibility="visible"
+                        android:weightSum="2">
+
+                        <ImageView
+                            android:id="@+id/nineUserImage"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:scaleType="fitXY" />
+
+                        <ImageView
+                            android:id="@+id/tenUserImage"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:scaleType="fitXY"
+                            android:visibility="visible" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/userProfilesVideoView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/actionButtonView"
+                android:layout_below="@+id/caller_info_view"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="@dimen/grid_specing"
+                android:visibility="gone"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:id="@+id/topVideoView"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginBottom="@dimen/grid_specing"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+
+                    <com.twilio.video.VideoView
+                        android:id="@+id/firstUserVideo"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@color/green" />
+
+
+                    <com.twilio.video.VideoView
+                        android:id="@+id/fourthUserVideo"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/bottomVideoView"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="@dimen/grid_specing"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+
+                    <com.twilio.video.VideoView
+                        android:id="@+id/secondUserVideoView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="2" />
+
+
+                    <com.twilio.video.VideoView
+                        android:id="@+id/thirdUserView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="2" />
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/actionButtonView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/fab_margin"
+                android:gravity="center_horizontal|center_vertical"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/speakerEnable"
+                    android:layout_width="@dimen/call_screen_fab_button_size"
+                    android:layout_height="@dimen/call_screen_fab_button_size"
+                    android:layout_gravity="bottom|end"
+                    android:layout_marginEnd="@dimen/fab_margin"
+                    android:layout_marginRight="@dimen/fab_margin"
+                    android:background="@android:color/transparent"
+                    android:padding="@dimen/grid_specing"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/speaker_on"
+                    android:visibility="gone" />
+
+                <ImageButton
+                    android:id="@+id/mute_audio_call_action"
+                    android:layout_width="@dimen/call_screen_fab_button_size"
+                    android:layout_height="@dimen/call_screen_fab_button_size"
+                    android:layout_gravity="bottom|end"
+                    android:layout_marginEnd="@dimen/fab_margin"
+                    android:layout_marginRight="@dimen/fab_margin"
+                    android:background="@android:color/transparent"
+                    android:padding="@dimen/grid_specing"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/mic_enable"
+                    android:visibility="gone" />
+
+                <ImageButton
+                    android:id="@+id/audio_call_hangup_action"
+                    android:layout_width="@dimen/call_screen_fab_button_size"
+                    android:layout_height="@dimen/call_screen_fab_button_size"
+                    android:layout_gravity="bottom|end"
+                    android:layout_marginEnd="@dimen/fab_margin"
+                    android:layout_marginRight="@dimen/fab_margin"
+                    android:background="@color/white"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/hangup_call_ic"
+                    android:visibility="visible" />
+
+                <ImageButton
+                    android:id="@+id/switchToVideo"
+                    android:layout_width="@dimen/call_screen_fab_button_size"
+                    android:layout_height="@dimen/call_screen_fab_button_size"
+                    android:layout_gravity="bottom|end"
+                    android:layout_marginEnd="@dimen/fab_margin"
+                    android:layout_marginRight="@dimen/fab_margin"
+                    android:background="@android:color/transparent"
+                    android:padding="@dimen/grid_specing"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/no_video"
+                    android:visibility="gone" />
+
+
+                <ImageButton
+                    android:id="@+id/startScreenSharing"
+                    android:layout_width="@dimen/call_screen_fab_button_size"
+                    android:layout_height="@dimen/call_screen_fab_button_size"
+                    android:layout_gravity="bottom|end"
+                    android:layout_marginEnd="@dimen/fab_margin"
+                    android:layout_marginRight="@dimen/fab_margin"
+                    android:background="@android:color/transparent"
+                    android:padding="@dimen/grid_specing"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/screenshare_disable"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </RelativeLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>
+

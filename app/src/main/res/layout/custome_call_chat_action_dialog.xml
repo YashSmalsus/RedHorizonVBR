@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/grid_specing"
+    android:background="@drawable/rounded_white_bg_liniear"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="Select What you Want "
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:id="@+id/audio_call_item_btn"
+        android:layout_width="wrap_content"
+        android:padding="@dimen/grid_specing"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:background="@android:color/transparent"
+            android:padding="@dimen/grid_specing"
+            android:scaleType="fitCenter"
+            android:src="@drawable/audio_call_ic" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="@dimen/grid_specing"
+            android:text="Audio Call"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/video_call_btn"
+        android:layout_width="wrap_content"
+        android:gravity="center_vertical"
+        android:padding="@dimen/grid_specing"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:background="@android:color/transparent"
+            android:padding="@dimen/grid_specing"
+            android:scaleType="fitCenter"
+            android:src="@drawable/video_call_ic" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="@dimen/grid_specing"
+            android:text="Video Call"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/chat_call_btn"
+        android:layout_width="wrap_content"
+        android:gravity="center_vertical"
+        android:padding="@dimen/grid_specing"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:background="@android:color/transparent"
+            android:padding="@dimen/grid_specing"
+            android:scaleType="fitCenter"
+            android:src="@drawable/chat_ic" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="@dimen/grid_specing"
+            android:text="Chat"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+</LinearLayout>

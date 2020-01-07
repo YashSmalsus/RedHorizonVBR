@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@drawable/signup_bg"
+    android:layout_height="match_parent">
+
+    <!--<RelativeLayout-->
+        <!--android:id="@+id/profile"-->
+        <!--android:visibility="gone"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="@dimen/profile_section_height">-->
+
+        <!--<ImageView-->
+            <!--android:id="@+id/coverImage"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:scaleType="centerCrop"-->
+            <!--android:src="@drawable/coverbg" />-->
+
+        <!--<com.mikhaellopez.circularimageview.CircularImageView-->
+            <!--android:id="@+id/profile_user"-->
+            <!--android:layout_width="@dimen/user_profile_view_size"-->
+            <!--android:layout_height="@dimen/user_profile_view_size"-->
+            <!--android:layout_marginLeft="@dimen/fab_margin"-->
+            <!--android:layout_marginTop="@dimen/grid_specing"-->
+            <!--android:scaleType="centerCrop"-->
+            <!--android:src="@drawable/image" />-->
+
+        <!--<ImageView-->
+            <!--android:id="@+id/imageupload"-->
+            <!--android:layout_width="@dimen/edit_profile_btn_size"-->
+            <!--android:layout_height="@dimen/edit_profile_btn_size"-->
+            <!--android:layout_marginLeft="40dp"-->
+            <!--android:layout_marginTop="30dp"-->
+            <!--android:clickable="true"-->
+            <!--android:src="@drawable/edit"-->
+            <!--android:visibility="gone" />-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/name_user"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_below="@+id/profile_user"-->
+            <!--android:layout_marginLeft="@dimen/fab_margin"-->
+            <!--android:layout_marginTop="@dimen/grid_specing"-->
+            <!--android:textColor="@color/white"-->
+            <!--android:textSize="17sp" />-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/todaydateview"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_centerHorizontal="true"-->
+            <!--android:fontFamily="sans-serif-medium"-->
+            <!--android:textColor="@color/white"-->
+            <!--android:textSize="@dimen/tab_title_text_size"-->
+            <!--android:textStyle="bold" />-->
+
+        <!--<ImageButton-->
+            <!--android:id="@+id/background_btn"-->
+            <!--android:layout_width="@dimen/addEventBtnSize"-->
+            <!--android:layout_height="@dimen/addEventBtnSize"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_marginTop="@dimen/fab_margin"-->
+            <!--android:layout_marginRight="@dimen/fab_margin"-->
+            <!--android:background="@android:color/transparent"-->
+            <!--android:scaleType="fitCenter"-->
+            <!--android:src="@drawable/edit_btn" />-->
+
+        <!--<ImageView-->
+            <!--android:id="@+id/searchEvent"-->
+            <!--android:layout_width="@dimen/addEventBtnSize"-->
+            <!--android:layout_height="@dimen/addEventBtnSize"-->
+            <!--android:layout_below="@+id/background_btn"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_marginTop="@dimen/grid_specing"-->
+            <!--android:layout_marginRight="@dimen/fab_margin"-->
+            <!--android:background="@android:color/transparent"-->
+            <!--android:scaleType="fitCenter"-->
+            <!--android:src="@drawable/edit_btn" />-->
+
+        <!--<RelativeLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignParentBottom="true">-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/noofevnt"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginLeft="25dp"-->
+                <!--android:layout_marginTop="5dp"-->
+                <!--android:fontFamily="sans-serif"-->
+                <!--android:text="@string/today_no_of_event"-->
+                <!--android:textColor="@color/white"-->
+                <!--android:textSize="17sp" />-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/eventcounter"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginLeft="10dp"-->
+                <!--android:layout_toRightOf="@+id/noofevnt"-->
+                <!--android:textColor="@color/white"-->
+                <!--android:textSize="22sp" />-->
+
+
+            <!--<ImageButton-->
+                <!--android:id="@+id/settingbtn"-->
+                <!--android:layout_width="@dimen/edit_btn_size"-->
+                <!--android:layout_height="@dimen/edit_btn_size"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:layout_marginRight="@dimen/fab_margin"-->
+                <!--android:background="@android:color/transparent"-->
+                <!--android:padding="@dimen/grid_specing"-->
+                <!--android:scaleType="fitCenter"-->
+                <!--android:src="@drawable/rh_signup_icon" />-->
+        <!--</RelativeLayout>-->
+    <!--</RelativeLayout>-->
+
+<LinearLayout
+    android:id="@+id/eventTab"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:weightSum="3"
+    android:background="@color/black"
+    android:layout_height="@dimen/dashboard_top_tab_height"
+    android:baselineAligned="false">
+    <RelativeLayout
+        android:id="@+id/pastBtnContainer"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/pastBtn"
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="PAST"
+            android:paddingRight="@dimen/grid_specing"
+            android:textSize="@dimen/tab_text_size"
+            android:textColor="@color/white"
+            android:layout_centerInParent="true"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/pastItemCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/grid_specing"
+            android:layout_toRightOf="@id/pastBtn"
+            android:gravity="center"
+            android:visibility="visible"
+            android:text="0"
+            android:textColor="@color/white"
+            android:textSize="@dimen/basges_text_size"
+            android:textStyle="bold"
+            android:background="@drawable/badge_circle"/>
+        <View
+            android:id="@+id/pastTabDevider"
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:visibility="gone"
+            android:layout_alignParentBottom="true"
+            android:layout_height="2dp"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/currentItemContainer"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/currentBtn"
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="CURRENT"
+            android:paddingRight="@dimen/grid_specing"
+            android:textSize="@dimen/tab_text_size"
+            android:textColor="@color/white"
+            android:layout_centerInParent="true"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/currentEventItemCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/grid_specing"
+            android:layout_toRightOf="@id/currentBtn"
+            android:gravity="center"
+            android:visibility="visible"
+            android:text="0"
+            android:textColor="@color/white"
+            android:textSize="@dimen/basges_text_size"
+            android:textStyle="bold"
+            android:background="@drawable/badge_circle"/>
+        <View
+            android:id="@+id/currentTabDevider"
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:visibility="visible"
+            android:layout_alignParentBottom="true"
+            android:layout_height="2dp"/>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/upcommingItemContainer"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/upcomingItemBtn"
+            android:layout_width="wrap_content"
+            android:paddingRight="@dimen/grid_specing"
+            android:layout_centerVertical="true"
+            android:text="UPCOMING"
+            android:textSize="@dimen/tab_text_size"
+            android:textColor="@color/white"
+            android:layout_centerInParent="true"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/upcomingItemCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/grid_specing"
+            android:layout_toRightOf="@id/upcomingItemBtn"
+            android:gravity="center"
+            android:visibility="visible"
+            android:text="0"
+            android:textColor="@color/white"
+            android:textSize="@dimen/basges_text_size"
+            android:textStyle="bold"
+            android:background="@drawable/badge_circle"/>
+        <View
+            android:id="@+id/upcomingTabDevider"
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:visibility="gone"
+            android:layout_alignParentBottom="true"
+            android:layout_height="2dp"/>
+    </RelativeLayout>
+
+</LinearLayout>
+
+    <ExpandableListView
+        android:id="@+id/listview"
+        android:layout_margin="@dimen/fab_margin"
+        android:layout_width="match_parent"
+        android:groupIndicator="@null"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/eventTab"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="0dp" />
+
+    <TextView
+        android:id="@+id/noEventToday"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="@dimen/profile_section_height"
+        android:text="@string/no_event_today"
+        android:textColor="@android:color/darker_gray"
+        android:visibility="gone" />
+</RelativeLayout>

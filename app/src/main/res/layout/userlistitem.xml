@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="3dp"
+    style="@style/ListItem"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/contactsBadgesContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/userNamesList"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:visibility="gone"/>
+
+        <!--<androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/selectedContactRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:visibility="gone"/>-->
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/selectedContactCardViewContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:padding="5dp"
+            android:background="@color/white">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <com.mikhaellopez.circularimageview.CircularImageView
+                    android:id="@+id/selectedContactUserProfileImage"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/defaultuser"
+                    android:layout_centerHorizontal="true"/>
+
+                <TextView
+                    android:id="@+id/selectedContactName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/selectedContactUserProfileImage"
+                    android:text="Yash Agarwal"/>
+
+                <ImageButton
+                    android:id="@+id/removeFromSelectedContactsList"
+                    android:layout_height="30dp"
+                    android:layout_width="30dp"
+                    android:layout_alignRight="@id/selectedContactUserProfileImage"
+                    android:layout_alignBottom="@id/selectedContactUserProfileImage"
+                    android:layout_centerHorizontal="true"
+                    android:onClick="onRemoveFromeContactsList"
+                    android:background="@drawable/ic_cancel_black_24dp"
+                    android:clickable="true"
+                    android:visibility="visible" />
+
+            </RelativeLayout>
+
+
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/mainlayout"
+        style="@style/ListItem">
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:id="@+id/userprofilepic"
+            android:layout_width="@dimen/userprofileheghtandwidth"
+            android:layout_height="@dimen/userprofileheghtandwidth"
+            android:scaleType="centerCrop"
+            app:civ_shadow="false" />
+
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="@dimen/grid_specing"
+            android:layout_toRightOf="@+id/userprofilepic"
+            android:fontFamily="sans-serif"
+            android:text="@string/app_name"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/userLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/username"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="2dp"
+            android:layout_toRightOf="@+id/userprofilepic"
+            android:fontFamily="sans-serif"
+            android:textColor="@color/grey"
+            android:textSize="@dimen/location_text_size" />
+
+        <ImageView
+            android:id="@+id/selectimage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/tick"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/grey" />
+</LinearLayout>

@@ -1,0 +1,17 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.smalsus.redhorizonvbr.view.activities.GroupDetailsScreen">
+    <item
+        android:id="@+id/action_add_new_memeber"
+        android:orderInCategory="100"
+        android:title="@string/add_member_in_group"
+        android:icon="@drawable/add_btn"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/editGroup"
+        android:orderInCategory="100"
+        android:title="@string/edit_group"
+        android:icon="@drawable/edit"
+        app:showAsAction="always" />
+</menu>

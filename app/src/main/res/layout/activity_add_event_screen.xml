@@ -1,0 +1,456 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/custome_toolbar_height"
+        android:background="@color/colorPrimary"
+        android:padding="10dp">
+        <ImageButton
+            android:id="@+id/addEvent_backbtn"
+            android:layout_width="@dimen/custome_toolbar_height"
+            android:layout_height="@dimen/custome_toolbar_height"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:src="@drawable/left" />
+        <TextView
+            android:id="@+id/screenTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/screen_title_text_size" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout style="@style/addeventlayout">
+            <TextView
+                android:id="@+id/addcontact"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:drawableLeft="@drawable/contact"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:text="Add Attendee "
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/attendeename"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:visibility="gone" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/black" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/grid_specing"
+                android:layout_marginBottom="@dimen/grid_specing"
+                android:textColorHint="@color/black">
+
+                <EditText
+                    android:id="@+id/input_subject"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/edittextline"
+                    android:backgroundTint="@color/black"
+                    android:hint="@string/subject_hint"
+                    android:textSize="@dimen/create_event_lable_text_size"
+                    android:inputType="text"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_marginBottom="8dp"
+                android:textColorHint="@color/black">
+
+                <EditText
+                    android:id="@+id/descption"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/edittextline"
+                    android:backgroundTint="@color/black"
+                    android:hint="Meeting Agenda"
+                    android:textSize="@dimen/create_event_lable_text_size"
+                    android:inputType="textMultiLine"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_marginBottom="8dp"
+                android:textColorHint="@color/black">
+
+                <EditText
+                    android:id="@+id/topicTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/edittextline"
+                    android:backgroundTint="@color/black"
+                    android:hint="Topic"
+                    android:textSize="@dimen/create_event_lable_text_size"
+                    android:inputType="textMultiLine"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_marginBottom="8dp"
+                android:textColorHint="@color/black">
+
+                <EditText
+                    android:id="@+id/subtopicTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/edittextline"
+                    android:backgroundTint="@color/black"
+                    android:hint="Sub Topic"
+                    android:inputType="textMultiLine"
+                    android:textSize="@dimen/create_event_lable_text_size"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_marginBottom="8dp"
+                android:textColorHint="@color/black">
+
+                <com.smalsus.redhorizonvbr.view.HashTagEditText
+                    android:id="@+id/eventHashtags"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/edittextline"
+                    android:backgroundTint="@color/black"
+                    android:hint="Hashtags"
+                    android:inputType="textMultiLine"
+                    android:textSize="14sp"
+                    app:bubbleTextColor="#ffffff"
+                    app:bubbleTextSize="14sp"
+                    app:horizontalPadding="8dp"
+                    app:horizontalSpacing="2dp"
+                    app:maxSize="10"
+                    app:bubbleBackground="@drawable/event_detail_shape"
+                    app:verticalPadding="4dp"
+                    app:verticalSpacing="2dp"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/grid_specing"
+                android:paddingBottom="@dimen/grid_specing"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="4dp"
+                    android:text="Location"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/create_event_lable_text_size" />
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/loation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="8dp"
+                    android:paddingLeft="4dp"
+                    android:popupBackground="@android:color/white"
+                    android:spinnerMode="dropdown" />
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/black" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/grid_specing"
+                android:paddingBottom="@dimen/grid_specing"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="4dp"
+                    android:text="Type of Discussion"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/create_event_lable_text_size" />
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/room"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="8dp"
+                    android:paddingLeft="4dp"
+                    android:popupBackground="@android:color/white"
+                    android:spinnerMode="dropdown" />
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/black" />
+
+            <LinearLayout
+                android:id="@+id/selectEventColorContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="6dp"
+                android:paddingBottom="6dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="4dp"
+                    android:text="Event Color"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/create_event_lable_text_size"
+                    android:visibility="visible"/>
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/selectEventColor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="8dp"
+                    android:paddingLeft="4dp"
+                    android:popupBackground="@color/white"
+                    android:spinnerMode="dropdown"
+                    android:visibility="visible"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/black_transparent_50"
+                android:visibility="gone"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/grid_specing"
+                android:paddingBottom="@dimen/grid_specing"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="4dp"
+                    android:text="Availability"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/create_event_lable_text_size" />
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/availability"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginBottom="8dp"
+                    android:paddingLeft="4dp"
+                    android:popupBackground="@android:color/white"
+                    android:spinnerMode="dropdown" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/black" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/grid_specing"
+                android:paddingBottom="@dimen/grid_specing"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="4dp"
+                    android:text="Reminder"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/create_event_lable_text_size" />
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/reminder"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="8dp"
+                    android:paddingLeft="4dp"
+                    android:popupBackground="@android:color/white"
+                    android:spinnerMode="dropdown" />
+            </LinearLayout>
+
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/black" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/grid_specing"
+                android:paddingBottom="@dimen/grid_specing"
+                android:orientation="horizontal">
+
+                <Switch
+                    android:id="@+id/emailSwitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="E-Notifications"
+                    android:layoutDirection="ltr"
+                    app:switchPadding="8dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="8dp" />
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/black" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:weightSum="2"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+                <RelativeLayout
+                    android:id="@+id/startlayout"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="@dimen/fab_margin"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/startdate_v"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:layout_centerVertical="true"
+                        android:textSize="@dimen/create_event_lable_text_size"
+                        android:text="Start Date"/>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/calendar"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"/>
+                </RelativeLayout>
+
+
+
+
+                <RelativeLayout
+                    android:id="@+id/endlayout"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="@dimen/fab_margin"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/enddate_v"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:layout_centerVertical="true"
+                        android:textSize="@dimen/create_event_lable_text_size"
+                        android:text="End Date"/>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/calendar"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"/>
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/black" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <Switch
+                    android:id="@+id/privateSwitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="8dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Private Event"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/black" />
+
+            <Button
+                android:id="@+id/submit"
+                android:layout_width="match_parent"
+                android:background="@color/color_primary"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="Sumbit" />
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<androidx.core.widget.NestedScrollView
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey_transparent_20"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".view.activities.GroupDetailsScreen"
+    tools:showIn="@layout/activity_group_details_screen">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/fab_margin"
+            android:background="@color/white"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/participantsCounts"
+                android:layout_width="wrap_content"
+                android:fontFamily="sans-serif"
+                android:textColor="@color/colorPrimary"
+                android:layout_height="wrap_content" />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/participantsList"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/grid_specing"
+                android:visibility="visible" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/exitGroup"
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/fab_margin"
+            android:paddingTop="@dimen/fab_margin"
+            android:background="@color/white"
+            android:paddingBottom="@dimen/fab_margin"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textStyle="normal"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/font_medium"
+                android:paddingLeft="@dimen/fab_margin"
+                android:drawableLeft="@drawable/exit_group"
+                android:drawablePadding="@dimen/fab_margin"
+                android:text="@string/exit_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/reportGroup"
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/fab_margin"
+            android:paddingTop="@dimen/fab_margin"
+            android:background="@color/white"
+            android:paddingBottom="@dimen/fab_margin"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textStyle="normal"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/font_medium"
+                android:paddingLeft="@dimen/fab_margin"
+                android:drawableLeft="@drawable/report_group"
+                android:drawablePadding="@dimen/fab_margin"
+                android:text="@string/report_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
+</layout>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data class="SelectAddressScreenBinding" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/grey_transparent_20"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/addAdressTopView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/custome_toolbar_height"
+            android:background="@color/colorPrimary"
+            android:padding="10dp">
+
+            <ImageButton
+                android:id="@+id/selectAddressbackButton"
+                android:layout_width="@dimen/custome_toolbar_height"
+                android:layout_height="@dimen/custome_toolbar_height"
+                android:layout_centerVertical="true"
+                android:background="@android:color/transparent"
+                android:src="@drawable/left" />
+
+            <TextView
+                android:id="@+id/screenTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="Select Address"
+                android:textColor="@color/white"
+                android:textSize="@dimen/screen_title_text_size" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/addNewAddress"
+            android:layout_below="@+id/addAdressTopView"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/fab_margin"
+                android:layout_marginLeft="@dimen/fab_margin"
+                android:drawableStart="@drawable/add_address"
+                android:textColor="@color/colorPrimary"
+                android:drawableLeft="@drawable/add_address"
+                android:drawablePadding="@dimen/grid_specing"
+                android:text="Add a new Address"
+                android:textSize="@dimen/font_medium" />
+
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/addressChoiceList"
+            android:layout_below="@+id/addNewAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/fab_margin"
+            android:layout_above="@+id/addDiliveryAddressBtn"
+            android:background="@color/white"
+            android:scrollbars="none" />
+
+        <Button
+            android:id="@+id/addDiliveryAddressBtn"
+            android:layout_width="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_height="wrap_content"
+            android:background="@color/color_primary"
+            android:text="DELIVER HERE"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.fragments.NotificationFragment">
+    <RelativeLayout
+        android:id="@+id/notificationTopHeader"
+        android:layout_width="match_parent"
+        android:padding="10dp"
+        android:background="@color/colorPrimary"
+        android:layout_height="50dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="NOTIFICATIONS"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/invitelist"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/notificationTopHeader"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"/>
+
+    <LinearLayout
+        android:id="@+id/textViewNoNotification"
+        android:layout_width="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/no_notifications_image_view"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:src="@drawable/no_notifications_icon"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_below="@id/no_notifications_image_view"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="@string/no_notification_for_you"
+            android:textSize="20sp"
+            android:textColor="#000000"/>
+        <TextView
+            android:id="@+id/textViewNoNotificationDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:paddingLeft="40dp"
+            android:paddingRight="30dp"
+            android:layout_below="@id/textViewNoNotification"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:textSize="15sp"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="Stay tuned! Notifications about your activity will show up here."
+            android:textColor="@color/text_color_dark_grey"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
+    <!--
+    <?xml version="1.0" encoding="utf-8"?>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".view.fragments.NotificationFragment">
+        <RelativeLayout
+            android:id="@+id/notificationTopHeader"
+            android:layout_width="match_parent"
+            android:padding="10dp"
+            android:background="@color/colorPrimary"
+            android:layout_height="@dimen/custome_toolbar_height">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="@string/title_more"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/invitelist"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/notificationTopHeader"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"/>
+        <TextView
+            android:id="@+id/textViewNoNotification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/no_notification_for_you"
+            android:textColor="@android:color/darker_gray"
+            android:visibility="gone" />
+
+    </RelativeLayout>-->

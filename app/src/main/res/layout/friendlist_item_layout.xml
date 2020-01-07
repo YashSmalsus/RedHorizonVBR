@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView
+    android:id="@+id/contacts_list_card_view_container"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="8dp"
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="5dp"
+    app:cardCornerRadius="5dp">
+
+    <LinearLayout
+        android:id="@+id/transitionContainer"
+        style="@style/ListItem"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/mainlayout"
+            style="@style/ListItem"
+            android:clickable="true"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:paddingTop="4dp"
+            android:layout_marginBottom="4dp">
+
+            <com.mikhaellopez.circularimageview.CircularImageView
+                android:id="@+id/userprofilepic"
+                android:layout_width="@dimen/userprofileheghtandwidth"
+                android:layout_height="@dimen/userprofileheghtandwidth"
+                android:layout_centerVertical="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ai_image"
+                app:civ_shadow="false" />
+
+            <TextView
+                android:id="@+id/username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@+id/userprofilepic"
+                android:fontFamily="sans-serif"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:layout_marginBottom="8dp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font_medium"
+                android:layout_marginStart="15dp" />
+
+            <TextView
+                android:id="@+id/userID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/username"
+                android:layout_marginLeft="16dp"
+                android:layout_marginBottom="8dp"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/grid_item_divider"
+                android:layout_toRightOf="@+id/userprofilepic"
+                android:fontFamily="sans-serif"
+                android:textColor="@color/grey"
+                android:textSize="@dimen/location_text_size" />
+
+            <TextView
+                android:id="@+id/userLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/userID"
+                android:maxLines="1"
+                android:layout_centerVertical="true"
+                android:ellipsize="end"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/userprofilepic"
+                android:fontFamily="sans-serif"
+                android:textColor="@color/grey"
+                android:textSize="@dimen/location_text_size" />
+
+
+
+                <ImageView
+                    android:id="@+id/expandButton"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:clickable="true"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/contact_buttons_expand" />
+
+
+
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/contacts_container_separator"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/grey_transparent_20"
+            android:visibility="gone"/>
+
+        <LinearLayout
+            android:id="@+id/actionButtonView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:layout_below="@id/mainlayout"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:visibility="visible"
+            android:background="@color/white"
+            android:gravity="center"
+            android:weightSum="4"
+            android:layout_alignParentEnd="true">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/audioCallButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/call_google" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Call"
+                    android:textSize="14sp"
+                    android:layout_below="@id/audioCallButton"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/montserrat_medium"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/videoCallButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/video_call_google"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Video call"
+                    android:textSize="14sp"
+                    android:layout_below="@id/videoCallButton"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/montserrat_medium"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/chatButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/message_google"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Message"
+                    android:textSize="14sp"
+                    android:layout_below="@id/chatButton"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/montserrat_medium"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/emailButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/email_google"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Email"
+                    android:textSize="14sp"
+                    android:layout_below="@id/emailButton"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/montserrat_medium"/>
+
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

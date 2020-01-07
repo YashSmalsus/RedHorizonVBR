@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:id="@+id/topHeaderView"
+        android:layout_width="match_parent"
+        android:background="@drawable/event_list_itel_collapse_bg"
+        android:paddingLeft="@dimen/fab_margin"
+        android:paddingRight="@dimen/fab_margin"
+        android:paddingTop="@dimen/grid_specing"
+        android:paddingBottom="@dimen/grid_specing"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:id="@+id/eventHeaderFirstView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/lblListHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/montserrat_medium"
+                android:layout_alignParentLeft="true"
+                android:text=""
+                android:layout_toLeftOf="@+id/eventCreatedDate"
+                android:layout_marginRight="@dimen/grid_specing"
+                android:textSize="18sp"
+                android:textColor="@color/black" />
+            <TextView
+                android:id="@+id/eventCreatedDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_medium"
+                android:layout_centerVertical="true"
+                android:text="25/01/2018"
+                android:textStyle="italic"
+                android:layout_alignParentRight="true"
+                android:textSize="16sp"
+                android:textColor="@color/black" />
+
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_below="@+id/eventHeaderFirstView"
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/grid_specing"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/eventCreateTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:textStyle="italic"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="11:00 AM"
+                android:layout_marginRight="@dimen/grid_specing"
+                android:textSize="14sp"
+                android:textColor="@color/black" />
+            <TextView
+                android:id="@+id/eventCreatedBy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="By Amit Choudhry"
+                android:fontFamily="@font/montserrat_medium"
+                android:layout_toLeftOf="@+id/groupIndicator"
+                android:layout_marginRight="@dimen/grid_specing"
+                android:textSize="14sp"
+                android:textColor="@color/black" />
+            <ImageView
+                android:id="@+id/groupIndicator"
+                android:layout_width="24dp"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/right_scroller"
+                android:scaleType="fitCenter"
+                android:background="@android:color/transparent"
+                android:layout_centerVertical="true"
+                android:layout_height="24dp" />
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+    <View
+        android:id="@+id/groupDevider"
+        android:layout_below="@+id/topHeaderView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fab_margin"
+        android:background="@android:color/transparent"
+        android:visibility="gone" />
+</RelativeLayout>

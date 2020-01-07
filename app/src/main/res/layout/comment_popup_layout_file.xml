@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/border"
+        android:minHeight="?attr/actionBarSize"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <LinearLayout
+            android:id="@+id/likeCountContainer"
+            android:layout_width="wrap_content"
+            android:layout_weight="2.6"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/image_like_width"
+                android:layout_height="@dimen/image_like_height"
+                android:src="@drawable/ic_reaction" />
+
+            <TextView
+                android:id="@+id/likes_count_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-2dp"
+                android:textColor="@color/title_txt"
+                android:textSize="@dimen/font_small" />
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/closePopupBtn"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight=".4"
+            android:background="@android:color/transparent"
+            android:padding="@dimen/grid_specing"
+            android:scaleType="fitCenter"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/craoss_close_ic" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/commentsListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/comment_section"
+        android:layout_below="@id/headerLayout"
+        android:layout_marginBottom="0dp" />
+
+    <RelativeLayout
+        android:id="@+id/comment_section"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/top_grey_border_layout">
+
+
+        <EditText
+            android:id="@+id/commentInputBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:fontFamily="sans-serif-light"
+            android:hint="Type Comment ..."
+            android:padding="10dp" />
+
+        <ImageButton
+            android:id="@+id/sendCommentBtn"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:padding="@dimen/fab_margin"
+            android:scaleType="fitCenter"
+            android:src="@drawable/send_action_button"
+            android:visibility="visible" />
+    </RelativeLayout>
+</RelativeLayout>

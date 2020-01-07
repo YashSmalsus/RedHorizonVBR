@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".view.activities.CreateSocialPostScreen">
+    <data class="CreateSocialPostScreenBinding" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/createPostTopHeader"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/custome_toolbar_height"
+            android:background="@color/white"
+            android:padding="10dp">
+
+            <ImageButton
+                android:id="@+id/createPost_backbtn"
+                android:layout_width="@dimen/custome_toolbar_height"
+                android:layout_height="@dimen/custome_toolbar_height"
+                android:layout_centerVertical="true"
+                android:background="@android:color/transparent"
+                android:src="@drawable/cancel_post_cross" />
+
+            <TextView
+                android:id="@+id/screenTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/createPost_backbtn"
+                android:text="Create Post"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font_medium"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/donepost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginRight="12dp"
+                android:alpha="0.5"
+                android:background="@drawable/create_post_background"
+                android:enabled="true"
+                android:fontFamily="@font/montserrat_medium"
+                android:gravity="center"
+                android:paddingLeft="@dimen/grid_specing"
+                android:paddingRight="@dimen/grid_specing"
+                android:text="Post"
+                android:textColor="@color/white"
+                android:textSize="19sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/topLine"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/createPostTopHeader"
+            android:background="@color/grey_transparent_50"
+            android:visibility="gone"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/topLine"
+            android:padding="@dimen/grid_specing">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="true"
+                android:focusableInTouchMode="true">
+
+                <RelativeLayout
+                    android:id="@+id/userView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/item_profile_img"
+                    android:background="@color/white"
+                    android:padding="@dimen/grid_specing">
+
+                    <com.smalsus.redhorizonvbr.view.CircleImageView
+                        android:id="@+id/userProfileImage"
+                        android:layout_width="@dimen/item_feed_profile_size"
+                        android:layout_height="@dimen/item_feed_profile_size"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginEnd="@dimen/grid_specing"
+                        android:layout_marginRight="@dimen/grid_specing"
+                        android:src="@drawable/redhorizon_icon" />
+
+                    <!--<TextView
+                    android:id="@+id/userName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/grid_specing"
+                    android:layout_marginLeft="@dimen/grid_specing"
+                    android:layout_toEndOf="@+id/userProfileImage"
+                    android:layout_toRightOf="@+id/userProfileImage"
+                    android:text="Ashwani Shahi Rajput"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_medium"/>-->
+
+                    <EditText
+                        android:id="@+id/input_subject"
+                        android:layout_width="wrap_content"
+                        android:padding="@dimen/grid_specing"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edittextline"
+                        android:hint="@string/whats_on_your_mind"
+                        android:inputType="text|textMultiLine|textCapSentences"
+                        android:maxLength="400"
+                        android:gravity="start"
+                        android:layout_marginTop="6dp"
+                        android:maxLines="50"
+                        android:layout_toRightOf="@id/userProfileImage"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/text_color_dark_grey"
+                        android:textSize="18sp" />
+
+                    <ImageButton
+                        android:id="@+id/attachmentButton"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:background="@color/white"
+                        android:padding="@dimen/grid_specing"
+                        android:layout_marginTop="10dp"
+                        android:layout_alignParentEnd="true"
+                        android:src="@drawable/attachment_ic"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/inputBoxContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/userView"
+                    android:layout_marginBottom="@dimen/font_large"
+                    android:background="@drawable/border"
+                    android:visibility="gone">
+
+
+
+                        <!--<EditText
+                            android:id="@+id/input_subject"
+                            android:layout_width="match_parent"
+                            android:padding="@dimen/grid_specing"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/edittextline"
+                            android:hint="@string/whats_on_your_mind"
+                            android:inputType="text|textMultiLine|textCapSentences"
+                            android:maxLength="400"
+                            android:gravity="start"
+                            android:maxLines="50"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/tw__light_gray"
+                            android:textSize="@dimen/font_small" />-->
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:background="@android:color/transparent"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/grid_specing">
+
+                        <!--<ImageButton
+                            android:id="@+id/attachmentButton"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="@color/white"
+                            android:padding="@dimen/grid_specing"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/attachment_ic" />-->
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:enabled="false"
+                            android:paddingLeft="@dimen/grid_specing"
+                            android:paddingRight="@dimen/grid_specing"
+                            android:text="Post"
+                            android:textColor="@color/grey"
+                            android:textSize="@dimen/screen_title_text_size" />
+
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/imageContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/inputBoxContainer"
+                    android:layout_marginBottom="@dimen/font_large"
+                    android:background="@color/white"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:id="@+id/imagePreviewView"
+                        android:layout_width="match_parent"
+                        android:layout_height="260dp"
+                        android:scaleType="fitCenter" />
+
+                    <ProgressBar
+                        android:id="@+id/progressBar"
+                        style="?android:attr/progressBarStyleLarge"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_centerInParent="true"
+                        android:visibility="gone" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+        </ScrollView>
+
+        <ProgressBar
+            android:id="@+id/postLoader"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+    </RelativeLayout>
+</layout>

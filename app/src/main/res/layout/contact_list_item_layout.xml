@@ -1,0 +1,73 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:padding="@dimen/grid_item_divider">
+
+    <com.mikhaellopez.circularimageview.CircularImageView
+        android:id="@+id/contactImage"
+        android:layout_width="@dimen/caller_profile_pic_size"
+        android:layout_height="@dimen/caller_profile_pic_size"
+        android:scaleType="centerCrop"
+        android:src="@drawable/defaultuser" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/contactImage"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/grid_item_divider"
+        android:paddingTop="@dimen/grid_item_divider">
+
+
+        <TextView
+            android:id="@+id/contactName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lineSpacingExtra="3dp"
+            android:padding="5dp"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/sendInvite"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@color/color_primary"
+            android:padding="@dimen/grid_specing"
+            android:text="Send Invite"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/contactNumber"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/contactName"
+            android:lineSpacingExtra="1dp"
+            android:padding="5dp"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/contactEmail"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/contactNumber"
+            android:lineSpacingExtra="3dp"
+            android:padding="5dp"
+            android:textSize="15sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/contactOtherDetails"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/contactEmail"
+            android:lineSpacingExtra="3dp"
+            android:padding="5dp"
+            android:textSize="15sp"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</RelativeLayout>

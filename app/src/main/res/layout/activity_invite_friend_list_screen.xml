@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".view.activities.InviteFriendLIstScreen">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/colorPrimary"
+        android:padding="10dp">
+
+        <ImageButton
+            android:id="@+id/backbtninvite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:scaleType="fitCenter"
+            android:background="@android:color/transparent"
+            android:src="@drawable/left" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="@string/invite_friend_title"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_medium_large" />
+        <ImageButton
+            android:id="@+id/inviteFromSocial"
+            android:layout_width="@dimen/userprofileheghtandwidth"
+            android:layout_alignParentRight="true"
+            android:layout_height="@dimen/userprofileheghtandwidth"
+            android:layout_centerVertical="true"
+            android:scaleType="fitCenter"
+            android:background="@android:color/transparent"
+            android:src="@drawable/facebook_invite" />
+
+        <ImageButton
+            android:id="@+id/okbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:paddingLeft="@dimen/fab_margin"
+        android:paddingRight="@dimen/fab_margin"
+        android:paddingBottom="@dimen/grid_specing">
+
+        <EditText
+            android:id="@+id/searchEditText"
+            android:imeOptions="actionSearch"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/custome_toolbar_height"
+            android:layout_gravity="center"
+            android:background="@drawable/search_box_bg"
+            android:drawableLeft="@drawable/search_ic"
+            android:drawablePadding="@dimen/fab_margin"
+            android:inputType="text"
+            android:gravity="center_vertical"
+            android:hint="@string/search_friend_hint"
+            android:maxLines="1" />
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/noUserFoundMessageView"
+        android:layout_width="match_parent"
+        android:text="No user Found"
+       android:textSize="@dimen/font_medium"
+        android:gravity="center_horizontal"
+        android:layout_height="wrap_content" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/userlist"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" />
+
+
+</LinearLayout>

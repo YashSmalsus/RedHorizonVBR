@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="userAddress"
+            type="com.smalsus.redhorizonvbr.db.entity.UserDeliveryAddress" />
+
+        <variable
+            name="productDetails"
+            type="com.smalsus.redhorizonvbr.model.ProductItemModelClass" />
+    </data>
+
+    <RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/grey_transparent_20"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context=".view.activities.ProductDetailsActivity"
+        tools:showIn="@layout/activity_product_details">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/bottomActionsButton"
+            android:layout_marginBottom="@dimen/fab_margin">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:padding="@dimen/fab_margin">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:visibility='@{userAddress!=null?View.VISIBLE : View.GONE}'
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/userName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/fab_margin"
+                            android:layout_marginRight="@dimen/fab_margin"
+                            android:text='@{userAddress!=null?userAddress.name:" "}'
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/font_medium" />
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/fab_margin"
+                            android:layout_marginTop="@dimen/fab_margin"
+                            android:layout_marginRight="@dimen/fab_margin"
+                            android:maxLines="3"
+                            android:text='@{userAddress != null?userAddress.buildingName + ","+userAddress.area :" "}'
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/font_small" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/fab_margin"
+                            android:layout_marginRight="@dimen/fab_margin"
+                            android:maxLines="3"
+                            android:text='@{userAddress!=null?userAddress.city + ","+userAddress.state+"-"+userAddress.pin_code:" "}'
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/font_small" />
+
+
+                        <TextView
+                            android:id="@+id/number"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/fab_margin"
+                            android:layout_marginTop="@dimen/grid_specing"
+                            android:layout_marginRight="@dimen/fab_margin"
+                            android:text="@{userAddress.phone_number}"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/font_small" />
+
+                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/addAddressButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/fab_margin"
+                        android:layout_weight="1"
+                        android:background="@color/black"
+                        android:gravity="center"
+                        android:padding="@dimen/grid_specing"
+                        android:text='@{userAddress!=null?"Change or Add Address":"Add Address"}'
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font_medium" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/fab_margin"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:background="@color/white"
+                        android:orientation="vertical"
+                        android:padding="@dimen/fab_margin">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/fab_margin"
+                            android:layout_marginRight="@dimen/fab_margin"
+                            android:text="@{productDetails.productName}"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/font_medium" />
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/fab_margin"
+                            android:layout_marginRight="@dimen/fab_margin"
+                            android:maxLines="1"
+                            android:visibility="gone"
+                            android:text="Black Strape Size Regular"
+                            android:textColor="@color/grey"
+                            android:textSize="@dimen/font_small" />
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/fab_margin"
+                            android:layout_marginTop="@dimen/grid_specing"
+                            android:layout_marginRight="@dimen/fab_margin"
+                            android:text="Seller:Redhorizon.com"
+                            android:textColor="@color/grey"
+                            android:textSize="@dimen/font_small" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/fab_margin"
+                            android:layout_marginTop="@dimen/fab_margin"
+                            android:layout_marginRight="@dimen/fab_margin"
+                            android:text='@{"$ "+String.valueOf(productDetails.price)}'
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/font_large" />
+
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/white">
+
+                        <ImageView
+                            android:id="@+id/productItemImage"
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"
+                            android:layout_centerInParent="true"
+                            android:scaleType="fitCenter" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/fab_margin"
+                    android:baselineAligned="false"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@color/white">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/fab_margin"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="PRICE DETAILS"
+                            android:textColor="@color/grey"
+                            android:textSize="@dimen/font_small" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_alignParentBottom="true"
+                            android:background="@color/grey_transparent_20" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@color/white"
+                        android:paddingLeft="@dimen/fab_margin"
+                        android:paddingRight="@dimen/fab_margin">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="Price"
+                            android:textColor="@color/grey"
+                            android:textSize="@dimen/font_small" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/fab_margin"
+                            android:text='@{"$ "+String.valueOf(productDetails.price)}'
+                            android:textColor="@color/grey"
+                            android:textSize="@dimen/font_small" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@color/white"
+                        android:paddingLeft="@dimen/fab_margin"
+                        android:paddingRight="@dimen/fab_margin">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:fontFamily="sans-serif-condensed"
+                            android:text="Delivery"
+                            android:textColor="@color/grey"
+                            android:textSize="@dimen/font_small" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/fab_margin"
+                            android:text="Free"
+                            android:textColor="@color/green"
+                            android:textSize="@dimen/font_small" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@color/white"
+                        android:paddingLeft="@dimen/fab_margin"
+                        android:paddingRight="@dimen/fab_margin">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="Amount Payable"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/font_small" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/fab_margin"
+                            android:text="@{String.valueOf(productDetails.price)}"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/font_small" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <LinearLayout
+            android:id="@+id/bottomActionsButton"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:padding="@dimen/grid_specing"
+            android:background="@drawable/top_bottom_border"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:text='@{"$ "+String.valueOf(productDetails.price)}'
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font_medium" />
+
+            <TextView
+                android:id="@+id/continueButton"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/black"
+                android:gravity="center"
+                android:text="Continue"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_medium" />
+        </LinearLayout>
+
+    </RelativeLayout>
+</layout>

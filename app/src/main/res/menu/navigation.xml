@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--<item-->
+        <!--android:id="@+id/navigation_home"-->
+        <!--android:icon="@drawable/vbr"-->
+        <!--android:enabled="true"-->
+        <!--android:title="@string/title_vbr" />-->
+    <!--<item-->
+        <!--android:id="@+id/navigation_dashboard"-->
+        <!--android:icon="@drawable/appointment"-->
+        <!--android:enabled="true"-->
+        <!--android:title="@string/title_my_booking" />-->
+    <!--<item-->
+        <!--android:id="@+id/navigation_notifications"-->
+        <!--android:icon="@drawable/profile"-->
+        <!--android:enabled="true"-->
+        <!--android:title="@string/title_user_profile" />-->
+    <!--<item-->
+        <!--android:id="@+id/navigation_contact"-->
+        <!--android:icon="@drawable/contact"-->
+        <!--android:enabled="true"-->
+        <!--android:title="@string/title_contact" />-->
+
+    <!--<item-->
+        <!--android:id="@+id/navigation_more"-->
+        <!--android:icon="@drawable/vmore"-->
+        <!--android:enabled="true"-->
+        <!--android:title="@string/title_more" />-->
+
+</menu>

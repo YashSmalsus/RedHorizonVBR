@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#353333"
+    tools:context=".view.fragments.QrCodeScannerGenrator">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/qrCodeScannerTopView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:padding="@dimen/grid_specing">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_toLeftOf="@+id/aiButton"
+                android:fontFamily="sans-serif-medium"
+                android:paddingRight="@dimen/fab_margin"
+                android:text="@string/qr_barcode_scanner"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="22sp" />
+
+            <ImageView
+                android:id="@+id/aiButton"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/grid_specing"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ai_image" />
+        </RelativeLayout>
+
+        <me.dm7.barcodescanner.zxing.ZXingScannerView
+            android:id="@+id/qrCodeScanner"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/qrCodeScannerTopView"/>
+
+        <LinearLayout
+            android:id="@+id/qrCodeScannerBottomView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/fab_margin"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <ImageButton
+                android:id="@+id/recentHistory"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="@dimen/fab_margin"
+                android:visibility="gone"
+                android:background="@drawable/search_recent_history"
+                android:padding="@dimen/grid_specing" />
+
+            <ImageButton
+                android:id="@+id/genrateBarcode"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/create_qr_code_ic"
+                android:padding="@dimen/grid_specing" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <!-- Adding bottom sheet after main content -->
+    <include layout="@layout/qr_text_type_details_bottom_popup_layout" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

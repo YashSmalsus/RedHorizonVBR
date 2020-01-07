@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data class="ConsumerStaplesBinding" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:background="@color/colorPrimary"
+                android:layout_height="@dimen/custome_toolbar_height">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="MERCHANDISE"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_large"
+                    android:textStyle="normal" />
+
+                <ImageButton
+                    android:id="@+id/myCartBtn"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:padding="@dimen/grid_specing"
+                    android:layout_toLeftOf="@+id/cartCount"
+                    android:layout_centerVertical="true"
+                    android:background="@android:color/transparent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/shopping_cart"
+                    android:layout_toStartOf="@+id/cartCountView" />
+                <TextView
+                    android:id="@+id/cartCountView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitStart"
+                    android:background="@drawable/white_radius"
+                    android:gravity="center"
+                    android:minWidth="17sp"
+                    android:adjustViewBounds="true"
+                    android:minHeight="17sp"
+                    android:paddingBottom="1dp"
+                    android:paddingLeft="4dp"
+                    android:paddingRight="4dp"
+                    android:text="0"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    android:visibility="visible"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginEnd="@dimen/grid_specing"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/grid_specing" />
+            </RelativeLayout>
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:background="@color/grey_transparent_10"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:background="@color/white"
+                    android:layout_marginTop="@dimen/grid_specing"
+                    android:layout_marginBottom="@dimen/grid_specing"
+                    android:layout_marginLeft="@dimen/fab_margin"
+                    android:layout_marginRight="@dimen/fab_margin"
+                    android:layout_height="250dp">
+
+                    <androidx.viewpager.widget.ViewPager
+                        android:id="@+id/imageSlider"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_alignParentTop="true" />
+
+                    <me.relex.circleindicator.CircleIndicator
+                        android:id="@+id/indicator"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        app:ci_width="@dimen/grid_specing"
+                        app:ci_height="@dimen/grid_specing"
+                        app:ci_margin="@dimen/grid_specing"
+                        app:ci_drawable="@color/colorPrimary"
+                        android:layout_alignParentBottom="true" />
+                </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/grid_specing"
+                android:background="@android:color/transparent"
+                android:layout_height="wrap_content">
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/consumerStaplesList"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_marginTop="@dimen/grid_specing"
+                    android:visibility="visible" />
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    android:layout_width="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:visibility="visible"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+    </RelativeLayout>
+</layout>

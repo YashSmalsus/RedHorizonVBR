@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ok_txt">ok</string>
+
+    <string name="chat_related_groupp_id">chat_group_id</string>
+    <string name="chat_group_name">CHATS</string>
+
+    <string name="other_groupp_id">other_group_id</string>
+    <string name="other_group_name">OTHERS</string>
+
+
+    <string name="CHANNEL_ID">com.smalsus.redhorizonvbr.redhorizon</string>
+    <string name="CHANNEL">Redhorizon</string>
+
+
+    <string name="CALL_CHANNEL_ID">com.smalsus.redhorizonvbr.call</string>
+    <string name="CALL_CHANNEL_NAME">Call Notification</string>
+
+    <string name="CHAT_CHANNEL_ID">com.smalsus.redhorizonvbr.chat</string>
+    <string name="CHAT_CHANNEL_NAME">Chat notification</string>
+
+
+    <string name="facebook_app_id">331393284402960</string>
+    <string name="fb_login_protocol_scheme">fb331393284402960</string>
+    <string name="Twitter_CONSUMER_KEY">cEzCC4VUW80MvjsESzDzzjdbY</string>
+    <string name="Twitter_CONSUMER_SECRET">aA9SDkjRrFBGK0bHUFVReLSPC6xJzezbSubk4x4XRwR7lWhOsU</string>
+    <string name="Google_Map_API_KEY">AIzaSyCtXnlzvn1uKrkn7MAaAmzpIdaP8AfLu1U</string>
+    <string name="add_event">ADD CALENDAR EVENT</string>
+    <string name="sun">SUN</string>
+    <string name="mon">MON</string>
+    <string name="tue">TUE</string>
+    <string name="wed">WED</string>
+    <string name="thu">THU</string>
+    <string name="fri">FRI</string>
+    <string name="sat">SAT</string>
+    <string name="app_name">RedHorizon</string>
+    <string-array name="eventtype">
+        <item>Round Table</item>
+        <item>Committee or Conference</item>
+        <item>Panel Discussion</item>
+        <item>Symposium</item>
+        <item>Lecture-Forum</item>
+        <item>Others</item>
+    </string-array>
+    <string-array name="colors">
+        <item>Very dark violet</item>
+        <item>Moderate cyan - lime green</item>
+        <item>Soft red</item>
+        <item>Strong blue</item>
+        <item>Dark grayish yellow</item>
+        <item>Soft blue</item>
+    </string-array>
+    <string-array name="location">
+        <item>Auditorium</item>
+        <item>Meeting Room</item>
+        <item>Reception Area</item>
+        <item>Rooftop</item>
+        <item>Coffee Shop</item>
+        <item>Sports Stadium</item>
+    </string-array>
+    <string-array name="reminder">
+        <item>5 min</item>
+        <item>10 min</item>
+        <item>15 min</item>
+        <item>20 min</item>
+        <item>25 min</item>
+    </string-array>
+    <string-array name="available">
+        <item>Available</item>
+        <item>Busy</item>
+        <item>In Meeting</item>
+        <item>Away</item>
+    </string-array>
+
+    <string name="btn_like">Like</string>
+    <string name="btn_comment">Comment</string>
+    <string name="btn_share">Share</string>
+    <string name="item_title" formatted="false">%s posted %s</string>
+    <string name="item_date" formatted="false">%s at %s</string>
+    <string name="item_likes" formatted="false">%s Likes</string>
+    <string name="author_name" formatted="false">Anonymous</string>
+
+    <!-- Dialogs strings. -->
+
+    <!-- Errors strings. -->
+    <string name="login_chat_login_error">Login Chat error. Please relogin. Error</string>
+    <string name="permission_unavailable">%s is not available now!</string>
+    <string name="field_name_user_name">User name</string>
+    <string name="field_name_chat_room_name">Chat room name</string>
+    <string name="error_name_must_not_contain_special_characters_from_app">%1$s must contain 3 &#8212; %2$s alphanumeric Latin characters without space, the first char must be a letter</string>
+
+    <!--menu-->
+
+    <!--action bar-->
+    <string name="actionbar_title_settings">Settings</string>
+    <string name="text_push_notification_message">"%s is calling you"</string>
+
+
+    <!-- send to-->
+    <string name="send_to">Send to</string>
+
+    <!-- Settings strings. -->
+    <integer name="pref_default_int_value">0</integer>
+    <string name="pref_startbitratevalue_key">startbitratevalue_preference</string>
+    <string name="pref_startbitratevalue_default">0</string>
+
+    <!--Call Settings-->
+
+    <string name="stop_share">Stop</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="virtual_board_room_title">Virtual Board Room</string>
+    <string name="title_activity_home_screen">HomeScreen</string>
+    <string name="title_my_booking">Itinerary</string>
+    <string name="title_more">Notification</string>
+    <string name="first_name_hint">First Name</string>
+    <string name="last_name_hint">Last Name</string>
+    <string name="update_profile_btn">Update Profile</string>
+    <string name="date_of_birth_hint">Date of Birth</string>
+    <string name="password_hint">Password</string>
+    <string name="privacy_policy_title">By Signup up , you confirm that you agree to our Term of Use and have read and understood our Privacy Policy.</string>
+    <string name="email_hint">Email</string>
+    <string name="user_name_hint">UserName</string>
+    <string name="phone_no_hint">Phone No</string>
+    <string name="dob_hint">DOB</string>
+    <string name="gender_hint">Gender</string>
+    <string name="male_hint">Male</string>
+    <string name="female_hint">Female</string>
+    <string name="no_event_today">No Event for Today</string>
+    <string name="update_event">Update Event</string>
+    <string name="add_event_title">Add Event</string>
+    <string name="no_name_hint">No Name</string>
+    <string name="no_contact_number">No Contact Number</string>
+    <string name="invite_user_from_your_contacts">Invite user from your Contacts</string>
+    <string name="contacts_title">Connection</string>
+    <string name="meeting_time">Meeting Time :</string>
+    <string name="email_or_phone_hint">Email or Phone</string>
+    <string name="forgot_password_hint">Forgot Password?</string>
+    <string name="team_meeting_tiitle">Team Meeting</string>
+    <string name="agenda_hint">Agenda :</string>
+    <string name="no_notification_for_you">No Notification for you</string>
+    <string name="title_activity_search_event">SearchEventActivity</string>
+    <string name="search_box_hint">Technology</string>
+    <string name="search_event_title">Search Event</string>
+    <string name="topic_hint">Topic :</string>
+    <string name="subtopic_hint">Sub Topic :</string>
+    <string name="parcticpants_hint">Parcticpants :</string>
+    <string name="create_event_title">Create Event</string>
+    <string name="subject_hint">Title</string>
+    <string name="near_me_title">Near Me</string>
+    <string name="web_title">Web</string>
+    <string name="dashboard_tab_title">Social</string>
+    <string name="clouds_tab_title">Clouds</string>
+    <string name="fav_tab_title">Fav</string>
+    <string name="camera_tab_title">Camera</string>
+    <string name="network_tab_title">Network</string>
+    <string name="add_tab_title">Add</string>
+    <string name="discover_tab_title">Discover</string>
+    <string name="contact_screen_title">CONNECTIONS</string>
+    <string name="search_friend_hint">Search Friend</string>
+    <string name="invite_friend_title">Invite Friend</string>
+    <string name="qr_barcode_scanner">QR+BarCode Scanner</string>
+
+
+    <string name="turn_speaker_on">Speaker ON</string>
+    <string name="callee">client identity or phone number</string>
+    <string name="callHint">Dial a client name or phone number. Leaving the field empty results in an automated response.</string>
+
+
+    <string name="error_retrieving_access_token">Error retrieving token</string>
+    <string name="permissions_needed">Camera and Microphone permissions needed. Please allow in App Settings for additional functionality.</string>
+    <string name="write_something_here">Write Something here…</string>
+    <string name="genrate_qrcode_titile">Genrate QRCode</string>
+    <string name="title_activity_product_details">ProductDetailsActivity</string>
+    <string name="screen_capture_error">Screen capturer error occurred.</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_order_summary_screen">OrderSummaryScreen</string>
+
+    <string name="screen_capture_permission_not_granted">Screen capture permission not granted</string>
+    <string name="title_activity_payment_screen">PaymentScreen</string>
+
+    <string name="googlepay_status_unavailable" translatable="false">Unfortunately, Google Pay is not available on this phone.</string>
+    <string name="googlepay_status_checking" translatable="false">Checking if Google Pay is available...</string>
+    <string name="payments_show_name" translatable="false">Successfully received payment data for %s!</string>
+    <string name="redhorizon_voice_call">REDHORIZON VOICE CALL</string>
+    <string name="connected_status">Connected</string>
+
+
+    <!-- Strings related to Settings -->
+
+
+    <!-- Accept Related  -->
+    <string name="button_text_token">FETCH TOKEN</string>
+    <string name="invalid_card_number">Invalid Card Number</string>
+    <string name="invalid_month">Invalid Month</string>
+    <string name="two_digit_month">Two Digit Month Required</string>
+    <string name="invalid_year">Invalid Year</string>
+    <string name="invalid_cvv">Invalid CVV</string>
+    <string name="invalid_zipcode">Invalid Zipcode</string>
+    <string name="error">Error</string>
+    <string name="code">"Code: "</string>
+    <string name="message">"Message: "</string>
+    <string name="extra_message">"Extra Message: "</string>
+    <string name="data_descriptor">"Data Descriptor :  "</string>
+    <string name="data_value">"Data Value:  "</string>
+    <string name="decision">"Decision: "</string>
+    <string name="token">"Token"</string>
+    <string name="cvv">CVV</string>
+    <string name="card_number">Card Number</string>
+    <string name="month">Month</string>
+    <string name="year">Year</string>
+    <string name="progress_message">Please Wait ... Your Payment is on Progress…</string>
+    <string name="progress_title">Please Wait</string>
+    <string name="tap_to_return_to_call">Tap to return to Call</string>
+    <string name="invite_friend">Invite Friend</string>
+    <string name="create_group">Create Group</string>
+    <string name="title_activity_group_details_screen">GroupDetailsScreen</string>
+    <string name="large_text">
+        "Material is the metaphor.\n\n"
+
+        "A material metaphor is the unifying theory of a rationalized space and a system of motion."
+        "The material is grounded in tactile reality, inspired by the study of paper and ink, yet "
+        "technologically advanced and open to imagination and magic.\n"
+        "Surfaces and edges of the material provide visual cues that are grounded in reality. The "
+        "use of familiar tactile attributes helps users quickly understand affordances. Yet the "
+        "flexibility of the material creates new affordances that supercede those in the physical "
+        "world, without breaking the rules of physics.\n"
+        "The fundamentals of light, surface, and movement are key to conveying how objects move, "
+        "interact, and exist in space and in relation to each other. Realistic lighting shows "
+        "seams, divides space, and indicates moving parts.\n\n"
+
+        "Bold, graphic, intentional.\n\n"
+
+        "The foundational elements of print based design typography, grids, space, scale, color, "
+        "and use of imagery guide visual treatments. These elements do far more than please the "
+        "eye. They create hierarchy, meaning, and focus. Deliberate color choices, edge to edge "
+        "imagery, large scale typography, and intentional white space create a bold and graphic "
+        "interface that immerse the user in the experience.\n"
+        "An emphasis on user actions makes core functionality immediately apparent and provides "
+        "waypoints for the user.\n\n"
+
+        "Motion provides meaning.\n\n"
+
+        "Motion respects and reinforces the user as the prime mover. Primary user actions are "
+        "inflection points that initiate motion, transforming the whole design.\n"
+        "All action takes place in a single environment. Objects are presented to the user without "
+        "breaking the continuity of experience even as they transform and reorganize.\n"
+        "Motion is meaningful and appropriate, serving to focus attention and maintain continuity. "
+        "Feedback is subtle yet clear. Transitions are efﬁcient yet coherent.\n\n"
+
+        "3D world.\n\n"
+
+        "The material environment is a 3D space, which means all objects have x, y, and z "
+        "dimensions. The z-axis is perpendicularly aligned to the plane of the display, with the "
+        "positive z-axis extending towards the viewer. Every sheet of material occupies a single "
+        "position along the z-axis and has a standard 1dp thickness.\n"
+        "On the web, the z-axis is used for layering and not for perspective. The 3D world is "
+        "emulated by manipulating the y-axis.\n\n"
+
+        "Light and shadow.\n\n"
+
+        "Within the material environment, virtual lights illuminate the scene. Key lights create "
+        "directional shadows, while ambient light creates soft shadows from all angles.\n"
+        "Shadows in the material environment are cast by these two light sources. In Android "
+        "development, shadows occur when light sources are blocked by sheets of material at "
+        "various positions along the z-axis. On the web, shadows are depicted by manipulating the "
+        "y-axis only. The following example shows the card with a height of 6dp.\n\n"
+
+        "Resting elevation.\n\n"
+
+        "All material objects, regardless of size, have a resting elevation, or default elevation "
+        "that does not change. If an object changes elevation, it should return to its resting "
+        "elevation as soon as possible.\n\n"
+
+        "Component elevations.\n\n"
+
+        "The resting elevation for a component type is consistent across apps (e.g., FAB elevation "
+        "does not vary from 6dp in one app to 16dp in another app).\n"
+        "Components may have different resting elevations across platforms, depending on the depth "
+        "of the environment (e.g., TV has a greater depth than mobile or desktop).\n\n"
+
+        "Responsive elevation and dynamic elevation offsets.\n\n"
+
+        "Some component types have responsive elevation, meaning they change elevation in response "
+        "to user input (e.g., normal, focused, and pressed) or system events. These elevation "
+        "changes are consistently implemented using dynamic elevation offsets.\n"
+        "Dynamic elevation offsets are the goal elevation that a component moves towards, relative "
+        "to the component’s resting state. They ensure that elevation changes are consistent "
+        "across actions and component types. For example, all components that lift on press have "
+        "the same elevation change relative to their resting elevation.\n"
+        "Once the input event is completed or cancelled, the component will return to its resting "
+        "elevation.\n\n"
+
+        "Avoiding elevation interference.\n\n"
+
+        "Components with responsive elevations may encounter other components as they move between "
+        "their resting elevations and dynamic elevation offsets. Because material cannot pass "
+        "through other material, components avoid interfering with one another any number of ways, "
+        "whether on a per component basis or using the entire app layout.\n"
+        "On a component level, components can move or be removed before they cause interference. "
+        "For example, a floating action button (FAB) can disappear or move off screen before a "
+        "user picks up a card, or it can move if a snackbar appears.\n"
+        "On the layout level, design your app layout to minimize opportunities for interference. "
+        "For example, position the FAB to one side of stream of a cards so the FAB won’t interfere "
+        "when a user tries to pick up one of cards.\n\n"
+    </string>
+    <string name="edit_group">Edit Group</string>
+    <string name="add_member_in_group">Add Member in Group</string>
+    <string name="paticipants_count">%d Participnats</string>
+    <string name="exit_group">Exit Group</string>
+    <string name="report_group">Report Group</string>
+    <string name="add_friend">Add Friend</string>
+    <string name="view_all">View All</string>
+    <string name="whats_on_your_mind">Whats on your mind ?</string>
+    <string name="amount_payable">Amount Payable</string>
+
+
+</resources>
